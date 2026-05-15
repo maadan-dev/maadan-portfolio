@@ -7,9 +7,9 @@ export const personalInfo = {
   subHeadline: "Mathematics graduate turned software developer. I ship client projects, build AI-powered tools, and learn fastest when the stakes are real.",
   about: "Self-taught developer based in Lagos. I studied Mathematics at FUNAAB, did NYSC as a STEM educator, and taught myself frontend development by building for real clients — not tutorials. My most recent project is a full-stack CV optimization tool I built using AI-augmented development: I direct AI agents with specific, narrow instructions to ship working products. I'm not a computer science engineer and I don't pretend to be. I'm someone who solves real problems, ships on deadline, and closes the gap between where I am and where I'm going — one project at a time.",
   email: "babatundemaadan@gmail.com",
-  github: "https://github.com/Mafresh-BB",
+  github: "https://github.com/maadan-dev",
   linkedin: "https://www.linkedin.com/in/abdulyekeenmaadan",
-  twitter: "https://x.com/Olamails_",
+  twitter: "https://x.com/maadan_dev",
   resumePdf: "/resume/Abdulyekeen_Maadan_Resume.pdf",
   personality: "I prefer solving real problems over building pretty placeholders."
 };
