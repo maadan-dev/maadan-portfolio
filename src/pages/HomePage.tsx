@@ -132,7 +132,7 @@ export function HomePage() {
         </motion.div>
 
         {/* Spacer — hero scrolls under this */}
-        <div style={{ height: '50vh', pointerEvents: 'none' }} />
+        <div style={{ height: '100vh', pointerEvents: 'none' }} />
 
         {/* Content slides over hero */}
         <div
