@@ -55,7 +55,7 @@ export const projects: Project[] = [
     result: "Launched April 13, 2026. Got organic traction on day one — real users sharing it in WhatsApp groups unprompted. No marketing spend.",
     tech: ["Go", "React", "TypeScript", "Tailwind CSS", "Gemini API", "Supabase"],
     image: "/nextrole-ng.mp4",
-    link: "https://nextrole-ng.vercel.app",
+    link: "https://nextroleng.tech",
     featured: true,
     highlights: [
       "Two-phase AI pipeline separating fact extraction from generation to prevent hallucination",

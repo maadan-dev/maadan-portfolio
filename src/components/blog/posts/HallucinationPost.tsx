@@ -2,7 +2,7 @@ export function HallucinationPost() {
   return (
     <>
       <p>
-        When I first built <a href="https://nextrole-ng.vercel.app" target="_blank" rel="noopener noreferrer">NextRole NG</a>, the AI was confidently inserting CRM experience, Next.js, and Ionic into CVs of candidates who had never touched those tools. The output looked impressive. It was fiction.
+        When I first built <a href="https://nextroleng.tech" target="_blank" rel="noopener noreferrer">NextRole NG</a>, the AI was confidently inserting CRM experience, Next.js, and Ionic into CVs of candidates who had never touched those tools. The output looked impressive. It was fiction.
       </p>
       <p>
         A candidate who submitted that CV to GTBank would get caught in the background check and blacklisted. The tool wasn't just unhelpful — it was actively harmful.

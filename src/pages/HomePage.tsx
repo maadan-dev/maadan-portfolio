@@ -80,7 +80,7 @@ export function HomePage() {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "NextRole NG",
-            "url": "https://nextrole-ng.vercel.app",
+            "url": "https://nextroleng.tech",
             "logo": "https://maadan.dev/images/nextrole.webp",
             "description": "AI-powered CV optimization tool for the Nigerian job market",
             "founder": {
