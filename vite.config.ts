@@ -2,7 +2,7 @@ import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { google } from '@ai-sdk/google'
-import { streamText } from 'ai'
+import { streamText, convertToModelMessages } from 'ai'
 
 const SYSTEM_PROMPT = `You are a sharp, deeply analytical, and highly technical AI Advocator representing Abdulyekeen Maadan (a Software Developer in Lagos). 
 You are NOT a subservient AI assistant. You treat the user as a respected peer or collaborator. 
@@ -45,7 +45,7 @@ export default defineConfig(({ mode }) => {
                   const result = streamText({
                     model: google('gemini-2.5-flash'),
                     system: SYSTEM_PROMPT,
-                    messages,
+                    messages: await convertToModelMessages(messages),
                   });
 
                   const response = result.toUIMessageStreamResponse();

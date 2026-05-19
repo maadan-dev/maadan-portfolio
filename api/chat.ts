@@ -1,5 +1,5 @@
 import { google } from '@ai-sdk/google';
-import { streamText } from 'ai';
+import { streamText, convertToModelMessages } from 'ai';
 
 export const config = {
   runtime: 'edge',
@@ -32,7 +32,7 @@ export default async function handler(req: Request) {
     const result = streamText({
       model: google('gemini-2.5-flash'),
       system: SYSTEM_PROMPT,
-      messages,
+      messages: await convertToModelMessages(messages),
     });
 
     return result.toUIMessageStreamResponse();
