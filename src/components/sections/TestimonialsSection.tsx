@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { testimonials } from '../../data/content';
 
-const ACCENT = '#3b82f6';
+const ACCENT= '#60a5fa';
 const E = [0.16, 1, 0.3, 1] as const;
 
 export function TestimonialsSection() {
@@ -46,7 +46,7 @@ export function TestimonialsSection() {
 
           <p style={{
             fontSize: 'clamp(0.85rem, 1.1vw, 1rem)',
-            color: 'rgba(250,250,250,0.35)',
+            color: 'rgba(250,250,250,0.5)',
             fontWeight: 300,
             maxWidth: 400,
           }}>
@@ -140,7 +140,7 @@ export function TestimonialsSection() {
                     fontSize: 10,
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    color: 'rgba(250,250,250,0.35)',
+                    color: 'rgba(250,250,250,0.5)',
                   }}>{testimonial.role}</span>
                 </div>
               </div>

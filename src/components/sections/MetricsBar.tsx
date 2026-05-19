@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { metrics } from '../../data/content';
 
-const ACCENT = '#3b82f6';
+const ACCENT= '#60a5fa';
 const E = [0.16, 1, 0.3, 1] as const;
 
 export function MetricsBar() {

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const ACCENT     = '#3b82f6';
+const ACCENT= '#60a5fa';
 const BG         = '#050505';
 const CREAM      = 'rgba(250,250,250,1)';
 const E: [number, number, number, number] = [0.16, 1, 0.3, 1];
@@ -123,7 +123,7 @@ export default function Loader({ onComplete }: LoaderProps) {
                       fontSize: 9,
                       letterSpacing: '0.28em',
                       textTransform: 'uppercase',
-                      color: 'rgba(250,250,250,0.22)',
+                      color: 'rgba(250,250,250,0.5)',
                     }}>Loading</span>
                     <span style={{
                       fontFamily: "'Barlow Condensed', sans-serif",

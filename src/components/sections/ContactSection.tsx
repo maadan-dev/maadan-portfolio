@@ -4,8 +4,8 @@ import { personalInfo } from '../../data/content';
 import emailjs from '@emailjs/browser';
 import { Send, Loader2, CheckCircle2 } from 'lucide-react';
 
-const ACCENT = '#3b82f6';
-const AR = '59,130,246';
+const ACCENT= '#60a5fa';
+const AR= '96,165,250';
 const E = [0.16, 1, 0.3, 1] as const;
 
 const LINKS = [
@@ -100,7 +100,7 @@ export function ContactSection() {
   };
 
   const inputStyle: React.CSSProperties = { width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 6, padding: '12px 16px', color: 'rgba(250,250,250,0.85)', fontSize: 14, outline: 'none', transition: 'border-color 0.2s ease' };
-  const labelStyle: React.CSSProperties = { fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 500, fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(250,250,250,0.35)', marginLeft: 2 };
+  const labelStyle: React.CSSProperties = { fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 500, fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(250,250,250,0.5)', marginLeft: 2 };
 
   return (
     <>
@@ -127,7 +127,7 @@ export function ContactSection() {
                 Let's build<br /><span style={{ color: ACCENT }}>something</span><br />that matters.
               </motion.h2>
 
-              <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} style={{ fontFamily: "'Barlow',sans-serif", fontWeight: 300, fontSize: 'clamp(0.85rem,1.4vw,1rem)', color: 'rgba(250,250,250,0.3)', fontStyle: 'italic', margin: 0 }}>
+              <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.2 }} style={{ fontFamily: "'Barlow',sans-serif", fontWeight: 300, fontSize: 'clamp(0.85rem,1.4vw,1rem)', color: 'rgba(250,250,250,0.5)', fontStyle: 'italic', margin: 0 }}>
                 Or just say hello — no agenda required.
               </motion.p>
 

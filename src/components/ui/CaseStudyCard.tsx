@@ -4,7 +4,7 @@ import type { Project } from '../../types';
 import { Badge } from './Badge';
 import { ArrowUpRight } from 'lucide-react';
 
-const ACCENT = '#3b82f6';
+const ACCENT= '#60a5fa';
 const E = [0.16, 1, 0.3, 1] as const;
 
 interface CaseStudyCardProps {
@@ -127,7 +127,7 @@ export function CaseStudyCard({ project, index }: CaseStudyCardProps) {
             fontSize: 11,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
-            color: 'rgba(250,250,250,0.4)',
+            color: 'rgba(250,250,250,0.55)',
           }}>
             {project.role}
           </p>
@@ -159,7 +159,7 @@ export function CaseStudyCard({ project, index }: CaseStudyCardProps) {
             </span>
             <ul style={{ marginTop: 8, display: 'flex', flexDirection: 'column', gap: 6 }}>
               {project.highlights.map((h, i) => (
-                <li key={i} style={{ display: 'flex', alignItems: 'start', gap: 8, fontSize: 13, color: 'rgba(250,250,250,0.45)', lineHeight: 1.6 }}>
+                <li key={i} style={{ display: 'flex', alignItems: 'start', gap: 8, fontSize: 13, color: 'rgba(250,250,250,0.55)', lineHeight: 1.6 }}>
                   <div style={{ width: 4, height: 4, borderRadius: '50%', background: ACCENT, marginTop: 7, flexShrink: 0, opacity: 0.6 }} />
                   {h}
                 </li>
@@ -209,7 +209,7 @@ export function CaseStudyCard({ project, index }: CaseStudyCardProps) {
                 fontSize: 12,
                 letterSpacing: '0.18em',
                 textTransform: 'uppercase',
-                color: 'rgba(250,250,250,0.4)',
+                color: 'rgba(250,250,250,0.55)',
                 textDecoration: 'none',
                 display: 'flex',
                 alignItems: 'center',

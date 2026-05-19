@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const ACCENT = '#3b82f6';
+const ACCENT= '#60a5fa';
 const E = [0.16, 1, 0.3, 1] as const;
 
 interface StatusTickerProps {
@@ -49,7 +49,7 @@ export default function StatusTicker({ visible }: StatusTickerProps) {
             fontWeight: 500,
             fontSize: 11,
             letterSpacing: '0.28em',
-            color: 'rgba(250,250,250,0.35)',
+            color: 'rgba(250,250,250,0.5)',
             textTransform: 'uppercase',
             whiteSpace: 'nowrap',
           }}

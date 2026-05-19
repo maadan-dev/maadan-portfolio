@@ -29,7 +29,7 @@ export function Footer() {
           fontSize: 11,
           letterSpacing: '0.22em',
           textTransform: 'uppercase',
-          color: 'rgba(250,250,250,0.4)',
+          color: 'rgba(250,250,250,0.55)',
         }}>
           {personalInfo.name}
         </span>
@@ -42,7 +42,7 @@ export function Footer() {
             fontWeight: 300,
             fontSize: 10,
             letterSpacing: '0.16em',
-            color: 'rgba(250,250,250,0.3)',
+            color: 'rgba(250,250,250,0.5)',
           }}
         >
           Engineered in Lagos, Nigeria

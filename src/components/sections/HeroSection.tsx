@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { personalInfo } from '../../data/content';
 import StatusTicker from '../ui/StatusTicker';
 
-const ACCENT = '#3b82f6';
+const ACCENT= '#60a5fa';
 const BG = '#050505';
 const E = [0.16, 1, 0.3, 1] as const;
 
@@ -217,7 +217,7 @@ export function HeroSection({ visible = true }: HeroSectionProps) {
             fontWeight: 300,
             fontSize: 'clamp(0.75rem, 1.2vw, 0.95rem)',
             letterSpacing: '0.12em',
-            color: 'rgba(250,250,250,0.35)',
+            color: 'rgba(250,250,250,0.5)',
             textTransform: 'uppercase',
           }}>
             {personalInfo.headline}
@@ -262,7 +262,7 @@ export function HeroSection({ visible = true }: HeroSectionProps) {
               fontSize: 13,
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
-              color: 'rgba(250,250,250,0.4)',
+              color: 'rgba(250,250,250,0.55)',
               textDecoration: 'none',
               transition: 'color 0.2s ease',
             }}
@@ -347,7 +347,7 @@ export function HeroSection({ visible = true }: HeroSectionProps) {
             fontWeight: 500,
             fontSize: 9,
             letterSpacing: '0.28em',
-            color: 'rgba(250,250,250,0.25)',
+            color: 'rgba(250,250,250,0.5)',
             textTransform: 'uppercase',
             writingMode: 'vertical-rl' as const,
             lineHeight: 1,

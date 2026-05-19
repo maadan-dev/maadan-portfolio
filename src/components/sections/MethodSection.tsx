@@ -2,8 +2,8 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { personalInfo, skillCategories } from '../../data/content';
 
-const ACCENT = '#3b82f6';
-const AR = '59,130,246';
+const ACCENT= '#60a5fa';
+const AR= '96,165,250';
 const E = [0.16, 1, 0.3, 1] as const;
 
 const LINES = [
@@ -43,7 +43,7 @@ export function MethodSection() {
               <img src="/images/profile.webp?v=2" alt="Abdulyekeen Maadan" loading="lazy" decoding="async" width={600} height={800} className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700" style={{ maxHeight: 340, objectPosition: 'center top' }} />
             </motion.div>
 
-            <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }} style={{ fontFamily: "'Barlow',sans-serif", fontWeight: 300, fontSize: 11, letterSpacing: '0.12em', color: 'rgba(250,250,250,0.25)' }}>
+            <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }} style={{ fontFamily: "'Barlow',sans-serif", fontWeight: 300, fontSize: 11, letterSpacing: '0.12em', color: 'rgba(250,250,250,0.5)' }}>
               React · TypeScript · Go · AI-Augmented
             </motion.span>
           </div>
@@ -73,7 +73,7 @@ export function MethodSection() {
             </div>
 
             {/* Philosophy */}
-            <motion.p initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-40px' }} transition={{ duration: 0.7, delay: 0.2, ease: E as any }} style={{ fontWeight: 300, fontSize: 'clamp(0.9rem,1.2vw,1.05rem)', lineHeight: 1.85, color: 'rgba(250,250,250,0.45)', maxWidth: 520, paddingLeft: 16, borderLeft: `2px solid rgba(${AR},0.2)` }}>
+            <motion.p initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-40px' }} transition={{ duration: 0.7, delay: 0.2, ease: E as any }} style={{ fontWeight: 300, fontSize: 'clamp(0.9rem,1.2vw,1.05rem)', lineHeight: 1.85, color: 'rgba(250,250,250,0.55)', maxWidth: 520, paddingLeft: 16, borderLeft: `2px solid rgba(${AR},0.2)` }}>
               {personalInfo.about}
             </motion.p>
 
@@ -105,7 +105,7 @@ export function MethodSection() {
               {STATS.map((s, i) => (
                 <motion.div key={s.label} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }} className="flex flex-col gap-1">
                   <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 900, fontSize: 'clamp(1.6rem,3vw,2.8rem)', letterSpacing: '-0.02em', color: ACCENT, lineHeight: 1 }}>{s.value}</span>
-                  <span style={{ fontFamily: "'Barlow',sans-serif", fontWeight: 300, fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(250,250,250,0.4)', whiteSpace: 'nowrap' }}>{s.label}</span>
+                  <span style={{ fontFamily: "'Barlow',sans-serif", fontWeight: 300, fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(250,250,250,0.55)', whiteSpace: 'nowrap' }}>{s.label}</span>
                 </motion.div>
               ))}
             </motion.div>

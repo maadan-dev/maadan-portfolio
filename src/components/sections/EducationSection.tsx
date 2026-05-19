@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { education, fellowship } from '../../data/content';
 
-const ACCENT = '#3b82f6';
-const AR = '59,130,246';
+const ACCENT= '#60a5fa';
+const AR= '96,165,250';
 const E = [0.16, 1, 0.3, 1] as const;
 
 export function EducationSection() {
@@ -24,7 +24,7 @@ export function EducationSection() {
               <h2 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: 'clamp(2rem,5vw,4rem)', letterSpacing: '-0.01em', lineHeight: 0.95, color: 'rgba(250,250,250,0.95)', marginBottom: 24 }}>
                 Engineering Built on{' '}<span style={{ color: ACCENT }}>Mathematics.</span>
               </h2>
-              <p style={{ fontSize: 'clamp(0.9rem,1.1vw,1rem)', color: 'rgba(250,250,250,0.45)', lineHeight: 1.8, fontWeight: 300 }}>
+              <p style={{ fontSize: 'clamp(0.9rem,1.1vw,1rem)', color: 'rgba(250,250,250,0.55)', lineHeight: 1.8, fontWeight: 300 }}>
                 {education.description}
               </p>
             </motion.div>
@@ -32,7 +32,7 @@ export function EducationSection() {
             {/* Degree card */}
             <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }} style={{ padding: '16px 20px', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 8, background: 'rgba(255,255,255,0.02)' }}>
               <h3 style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: 'clamp(1rem,1.5vw,1.2rem)', color: 'rgba(250,250,250,0.9)', marginBottom: 4 }}>{education.degree}</h3>
-              <p style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 400, fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(250,250,250,0.4)' }}>{education.institution}</p>
+              <p style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 400, fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(250,250,250,0.55)' }}>{education.institution}</p>
             </motion.div>
 
             {/* Image */}
@@ -57,7 +57,7 @@ export function EducationSection() {
               <h3 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: 'clamp(1.6rem,4vw,3rem)', letterSpacing: '-0.01em', lineHeight: 0.95, color: 'rgba(250,250,250,0.95)', marginBottom: 16 }}>
                 {fellowship.name}
               </h3>
-              <p style={{ fontSize: 'clamp(0.85rem,1.1vw,0.95rem)', color: 'rgba(250,250,250,0.45)', lineHeight: 1.8, fontWeight: 300 }}>
+              <p style={{ fontSize: 'clamp(0.85rem,1.1vw,0.95rem)', color: 'rgba(250,250,250,0.55)', lineHeight: 1.8, fontWeight: 300 }}>
                 {fellowship.description}
               </p>
             </motion.div>
