@@ -43,7 +43,7 @@ export default defineConfig(({ mode }) => {
                   const { messages } = JSON.parse(body);
 
                   const result = streamText({
-                    model: google('gemini-1.5-flash'),
+                    model: google('gemini-2.5-flash'),
                     system: SYSTEM_PROMPT,
                     messages,
                   });
