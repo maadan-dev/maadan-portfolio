@@ -30,11 +30,11 @@ export function BlogPost() {
         <meta name="description" content={post.subtitle} />
         <meta property="og:title" content={`${post.title} | Abdulyekeen Maadan`} />
         <meta property="og:description" content={post.subtitle} />
-        <meta property="og:image" content={`https://maadan.dev${post.ogImage}`} />
+        <meta property="og:image" content={`https://www.maadan.dev${post.ogImage}`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content={`Preview of ${post.title}`} />
-        <meta property="og:url" content={`https://maadan.dev/blog/${post.slug}`} />
+        <meta property="og:url" content={`https://www.maadan.dev/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="article:author" content="Abdulyekeen Maadan" />
         <meta property="article:published_time" content={new Date(post.date).toISOString()} />
@@ -42,7 +42,7 @@ export function BlogPost() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${post.title} | Abdulyekeen Maadan`} />
         <meta name="twitter:description" content={post.subtitle} />
-        <meta name="twitter:image" content={`https://maadan.dev${post.ogImage}`} />
+        <meta name="twitter:image" content={`https://www.maadan.dev${post.ogImage}`} />
         <meta name="twitter:image:alt" content={`Preview of ${post.title}`} />
       </Helmet>
       <article className="min-h-screen pt-32 pb-24 px-6 md:px-12">
