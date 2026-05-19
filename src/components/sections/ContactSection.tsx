@@ -141,21 +141,21 @@ export function ContactSection() {
               <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-2">
-                    <label style={labelStyle}>Name</label>
-                    <input required type="text" name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" style={inputStyle} />
+                    <label htmlFor="name" style={labelStyle}>Name</label>
+                    <input id="name" required type="text" name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" style={inputStyle} />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label style={labelStyle}>Email</label>
-                    <input required type="email" name="email" value={formData.email} onChange={handleChange} placeholder="john@example.com" style={inputStyle} />
+                    <label htmlFor="email" style={labelStyle}>Email</label>
+                    <input id="email" required type="email" name="email" value={formData.email} onChange={handleChange} placeholder="john@example.com" style={inputStyle} />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label style={labelStyle}>Subject</label>
-                  <input required type="text" name="subject" value={formData.subject} onChange={handleChange} placeholder="How can I help?" style={inputStyle} />
+                  <label htmlFor="subject" style={labelStyle}>Subject</label>
+                  <input id="subject" required type="text" name="subject" value={formData.subject} onChange={handleChange} placeholder="How can I help?" style={inputStyle} />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label style={labelStyle}>Message</label>
-                  <textarea required name="message" rows={4} value={formData.message} onChange={handleChange} placeholder="Your message..." style={{ ...inputStyle, resize: 'none' }} />
+                  <label htmlFor="message" style={labelStyle}>Message</label>
+                  <textarea id="message" required name="message" rows={4} value={formData.message} onChange={handleChange} placeholder="Your message..." style={{ ...inputStyle, resize: 'none' }} />
                 </div>
                 <button type="submit" disabled={status === 'sending' || status === 'success'} data-hover style={{ width: '100%', padding: 14, borderRadius: 6, border: status === 'success' ? '1px solid rgba(34,197,94,0.4)' : status === 'error' ? '1px solid rgba(239,68,68,0.4)' : `1px solid rgba(${AR},0.2)`, background: status === 'success' ? 'rgba(34,197,94,0.1)' : status === 'error' ? 'rgba(239,68,68,0.1)' : 'rgba(250,250,250,0.92)', color: status === 'success' ? 'rgb(34,197,94)' : status === 'error' ? 'rgb(239,68,68)' : '#050505', fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 600, fontSize: 14, letterSpacing: '0.15em', textTransform: 'uppercase', cursor: status === 'sending' ? 'wait' : 'pointer', transition: 'all 0.2s ease', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
                   <AnimatePresence mode="wait">
