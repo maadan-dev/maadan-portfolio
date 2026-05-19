@@ -81,7 +81,9 @@ export function BlogPost() {
           <div className="flex items-center gap-4 mt-8 pt-8 border-t border-border/50">
             <div>
               <p className="text-sm text-text-primary font-medium">Abdulyekeen Maadan</p>
-              <p className="text-xs text-text-secondary font-mono">{post.date} · {post.readTime}</p>
+              <p className="text-xs text-text-secondary font-mono">
+                {post.date} {post.lastUpdated && `· Updated ${post.lastUpdated}`} · {post.readTime}
+              </p>
             </div>
           </div>
         </motion.header>

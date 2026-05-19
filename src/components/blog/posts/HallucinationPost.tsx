@@ -45,7 +45,7 @@ export function HallucinationPost() {
           <div className="flex items-center gap-3">
             <span className="shrink-0 w-24 font-mono text-xs text-text-secondary text-right">INPUT</span>
             <span className="h-px flex-1 bg-border/50"></span>
-            <span className="shrink-0 px-3 py-1.5 bg-surface-hover rounded border border-border text-text-primary">CV (PDF / Text)</span>
+            <span className="shrink-0 px-3 py-1.5 bg-surface-hover rounded border border-border text-text-primary">CV (PDF / DOCX / Text)</span>
           </div>
           <div className="flex items-center justify-center">
             <span className="text-text-secondary text-lg">↓</span>

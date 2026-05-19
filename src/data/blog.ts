@@ -3,6 +3,7 @@ export interface PostMeta {
   title: string;
   subtitle: string;
   date: string;
+  lastUpdated?: string;
   readTime: string;
   category: string;
   ogImage?: string;
@@ -14,6 +15,7 @@ export const posts: PostMeta[] = [
     title: "How I Stopped My CV Tool From Lying to Users",
     subtitle: "The hallucination problem in AI CV tools isn't a prompt problem. It's an architecture problem.",
     date: "April 20, 2026",
+    lastUpdated: "May 19, 2026",
     readTime: "6 min read",
     category: "Engineering Deep Dive",
     ogImage: "/og/blog/hallucination-architecture.jpg"
