@@ -11,6 +11,8 @@ const WritingPage = lazy(() => import('./pages/WritingPage').then(m => ({ defaul
 const BlogPost = lazy(() => import('./pages/BlogPost').then(m => ({ default: m.BlogPost })));
 const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })));
 
+import { DeveloperTerminal } from './components/ui/DeveloperTerminal';
+
 function App() {
   return (
     <HelmetProvider>
@@ -26,6 +28,7 @@ function App() {
             </Routes>
           </Suspense>
         </Layout>
+        <DeveloperTerminal />
       </Router>
       <Analytics />
       <SpeedInsights />
