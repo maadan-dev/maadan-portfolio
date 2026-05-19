@@ -16,7 +16,7 @@ export function WritingPage() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Writing archive preview" />
-        <meta property="og:url" content="https://maadan.dev/writing" />
+        <meta property="og:url" content="https://www.maadan.dev/writing" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Writing | Abdulyekeen Maadan" />

@@ -37,7 +37,7 @@ export function HomePage() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Portfolio preview of Abdulyekeen Maadan" />
-        <meta property="og:url" content="https://maadan.dev/" />
+        <meta property="og:url" content="https://www.maadan.dev/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@Olamails_" />
@@ -52,7 +52,7 @@ export function HomePage() {
             "@type": "Person",
             "name": "Abdulyekeen Maadan",
             "jobTitle": "Software Developer",
-            "url": "https://maadan.dev",
+            "url": "https://www.maadan.dev",
             "image": "https://maadan.dev/images/profile.webp?v=2",
             "sameAs": [
               "https://www.linkedin.com/in/abdulyekeenmaadan",
@@ -105,7 +105,7 @@ export function HomePage() {
             "@type" : "WebSite",
             "name" : "Abdulyekeen Maadan",
             "alternateName" : ["Maadan", "Yekeen"],
-            "url" : "https://maadan.dev/"
+            "url" : "https://www.maadan.dev/"
           })}
         </script>
       </Helmet>
