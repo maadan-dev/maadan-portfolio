@@ -4,8 +4,8 @@ export const personalInfo = {
   name: "ABDULYEKEEN MAADAN",
   role: "Software Developer",
   headline: "I build things that work for real people.",
-  subHeadline: "Mathematics graduate turned software developer. I ship client projects, build AI-powered tools, and learn fastest when the stakes are real.",
-  about: "Self-taught developer based in Lagos. I studied Mathematics at FUNAAB, did NYSC as a STEM educator, and taught myself frontend development by building for real clients — not tutorials. My most recent project is a full-stack CV optimization tool I built using AI-augmented development: I direct AI agents with specific, narrow instructions to ship working products. I'm not a computer science engineer and I don't pretend to be. I'm someone who solves real problems, ships on deadline, and closes the gap between where I am and where I'm going — one project at a time.",
+  subHeadline: "Self-taught developer. I ship products, not just projects. Currently deepening my engineering foundations at Learn2Earn — a 2-year AI software engineering fellowship backed by the co-founder of Andela.",
+  about: "Self-taught developer based in Lagos. I studied Mathematics at FUNAAB, did NYSC as a STEM educator, and taught myself to build by shipping for real clients — not tutorials. I direct AI agents with specific, narrow instructions to produce working products, and I've shipped everything from a full-stack CV optimization tool to client websites for safaris and executives. I solve real problems, ship on deadline, and close the gap between where I am and where I'm going — one project at a time. Starting June 2026, I'm joining Learn2Earn's AI Software Engineering Fellowship to deepen my systems engineering skills over 24 months.",
   email: "babatundemaadan@gmail.com",
   github: "https://github.com/maadan-dev",
   linkedin: "https://www.linkedin.com/in/abdulyekeenmaadan",
@@ -24,6 +24,18 @@ export const education = {
   degree: "B.Sc. Mathematics",
   institution: "Federal University of Agriculture, Abeokuta",
   description: "A mathematics degree taught me to break problems into provable steps before writing any code. That same discipline — structure first, then execution — shapes how I approach frontend architecture, state management, and debugging. I don't guess. I reason through it."
+};
+
+export const fellowship = {
+  name: "Learn2Earn AI Software Engineering Fellowship",
+  cohort: "Cohort 2",
+  duration: "24 months (June 2026 – 2028)",
+  location: "Yaba, Lagos",
+  status: "Incoming Fellow",
+  founder: "Iyinoluwa Aboyeji (Co-founder, Andela & Flutterwave)",
+  platform: "01-edu (peer-to-peer, project-based)",
+  selection: "Competitive — selected from ~4,000 Lagos applicants via gamified assessment and 30-day Go/Shell piscine",
+  description: "A tuition-free, 2-year fellowship training AI-native software engineers for global tech roles. Selected through a rigorous process: a gamified cognitive assessment, followed by a 30-day systems programming piscine in Go and Shell with zero instruction — peer-to-peer learning only."
 };
 
 export const testimonials = [
@@ -76,7 +88,7 @@ export const projects: Project[] = [
 export const skillCategories: SkillCategory[] = [
   {
     title: "Core Languages",
-    skills: ["JavaScript (ES6+)", "TypeScript", "Go (Learning)", "HTML5/CSS3"]
+    skills: ["JavaScript (ES6+)", "TypeScript", "Go", "HTML5/CSS3"]
   },
   {
     title: "Frameworks & Tools",

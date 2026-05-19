@@ -5,12 +5,18 @@ export function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // If there is no hash (e.g. #contact), scroll to top
-    if (!hash) {
+    if (hash) {
+      // Wait for page to render, then scroll to the hash element
+      const timer = setTimeout(() => {
+        const el = document.querySelector(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    } else {
       window.scrollTo(0, 0);
-    } 
-    // If there is a hash, we let the browser handle it or we can handle it manually if needed
-    // But for SPAs, scrollTo(0,0) is the default expected behavior on page change
+    }
   }, [pathname, hash]);
 
   return null;

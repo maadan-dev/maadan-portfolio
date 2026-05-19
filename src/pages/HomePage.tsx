@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { HeroSection } from '../components/sections/HeroSection';
 import { MetricsBar } from '../components/sections/MetricsBar';
 import { CaseStudies } from '../components/sections/CaseStudies';
@@ -6,8 +8,23 @@ import { MethodSection } from '../components/sections/MethodSection';
 import { EducationSection } from '../components/sections/EducationSection';
 import { TestimonialsSection } from '../components/sections/TestimonialsSection';
 import { ContactSection } from '../components/sections/ContactSection';
+import Loader from '../components/ui/Loader';
 
 export function HomePage() {
+  const alreadyLoaded = sessionStorage.getItem('hasLoaded');
+  const [showLoader, setShowLoader] = useState(() => !alreadyLoaded);
+  const [heroVisible, setHeroVisible] = useState(() => !!alreadyLoaded);
+
+  const { scrollYProgress } = useScroll();
+  const heroScale = useTransform(scrollYProgress, [0, 0.25], [1, 0.94]);
+  const heroOpacity = useTransform(scrollYProgress, [0.15, 0.25], [1, 0]);
+
+  const handleLoaderComplete = () => {
+    sessionStorage.setItem('hasLoaded', 'true');
+    setShowLoader(false);
+    setHeroVisible(true);
+  };
+
   return (
     <>
       <Helmet>
@@ -42,9 +59,7 @@ export function HomePage() {
               "https://github.com/mafresh-bb"
             ],
             "knowsAbout": [
-              "React",
-              "TypeScript",
-              "Go",
+              "React", "TypeScript", "Go",
               "AI-Augmented Development",
               "Fullstack Development",
               "Software Architecture"
@@ -94,13 +109,48 @@ export function HomePage() {
           })}
         </script>
       </Helmet>
-      <HeroSection />
-      <MetricsBar />
-      <CaseStudies />
-      <MethodSection />
-      <EducationSection />
-      <TestimonialsSection />
-      <ContactSection />
+
+      {showLoader && <Loader onComplete={handleLoaderComplete} />}
+
+      <div className="relative w-full">
+        {/* Hero: fixed position, scales/fades on scroll */}
+        <motion.div
+          style={{
+            scale: heroScale,
+            opacity: heroOpacity,
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100vh',
+            zIndex: 1,
+            pointerEvents: 'auto',
+            transformOrigin: 'center top',
+          }}
+        >
+          <HeroSection visible={heroVisible} />
+        </motion.div>
+
+        {/* Spacer — hero scrolls under this */}
+        <div style={{ height: '50vh', pointerEvents: 'none' }} />
+
+        {/* Content slides over hero */}
+        <div
+          style={{
+            position: 'relative',
+            zIndex: 10,
+            backgroundColor: '#050505',
+            boxShadow: '0 -60px 120px 40px #050505',
+          }}
+        >
+          <MetricsBar />
+          <CaseStudies />
+          <MethodSection />
+          <EducationSection />
+          <TestimonialsSection />
+          <ContactSection />
+        </div>
+      </div>
     </>
   );
 }

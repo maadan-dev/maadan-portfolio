@@ -1,17 +1,22 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 import { Navigation } from './Navigation';
 import { Footer } from './Footer';
+import CustomCursor from '../ui/CustomCursor';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 export function Layout({ children }: LayoutProps) {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       infinite: false,
     });
 
@@ -26,11 +31,12 @@ export function Layout({ children }: LayoutProps) {
       lenis.destroy();
     };
   }, []);
-  
+
   return (
     <div className="min-h-screen bg-background text-text-primary selection:bg-accent selection:text-white">
+      {isHomePage && <CustomCursor />}
       <Navigation />
-      <main className="relative z-10 w-full overflow-hidden">
+      <main className="relative z-10 w-full">
         {children}
       </main>
       <Footer />

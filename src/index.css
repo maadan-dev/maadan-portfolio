@@ -31,6 +31,7 @@
 @layer base {
   :root {
     color-scheme: dark;
+    --color-accent-rgb: 59, 130, 246;
   }
 
   html,
@@ -39,6 +40,10 @@
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
+
+  /* Hide scrollbar for cinematic feel */
+  ::-webkit-scrollbar { display: none; }
+  html { scrollbar-width: none; }
 
   ::selection {
     background: var(--color-accent);
