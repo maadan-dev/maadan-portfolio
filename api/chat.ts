@@ -1,4 +1,5 @@
 import { google } from '@ai-sdk/google';
+import { openai } from '@ai-sdk/openai';
 import { streamText } from 'ai';
 
 export const config = {
@@ -29,8 +30,13 @@ export default async function handler(req: Request) {
   try {
     const { messages } = await req.json();
 
+    const useOpenAI = !!process.env.OPENAI_API_KEY;
+    const model = useOpenAI 
+      ? openai('gpt-4o-mini') 
+      : google('gemini-1.5-flash');
+
     const result = streamText({
-      model: google('gemini-1.5-flash'),
+      model,
       system: SYSTEM_PROMPT,
       messages,
     });
