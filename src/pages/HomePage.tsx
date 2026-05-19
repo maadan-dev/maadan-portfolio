@@ -40,8 +40,8 @@ export function HomePage() {
         <meta property="og:url" content="https://www.maadan.dev/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@Olamails_" />
-        <meta name="twitter:creator" content="@Olamails_" />
+        <meta name="twitter:site" content="@maadan_dev" />
+        <meta name="twitter:creator" content="@maadan_dev" />
         <meta name="twitter:title" content="Abdulyekeen Maadan | Software Developer" />
         <meta name="twitter:description" content="Software developer based in Lagos. Building real products with React, TypeScript, Go, and AI-augmented workflows." />
         <meta name="twitter:image" content="https://maadan.dev/og/og-image.jpg?v=2" />
@@ -56,7 +56,7 @@ export function HomePage() {
             "image": "https://maadan.dev/images/profile.webp?v=2",
             "sameAs": [
               "https://www.linkedin.com/in/abdulyekeenmaadan",
-              "https://github.com/mafresh-bb"
+              "https://github.com/maadan-dev"
             ],
             "knowsAbout": [
               "React", "TypeScript", "Go",
@@ -88,7 +88,7 @@ export function HomePage() {
               "name": "Abdulyekeen Maadan"
             },
             "sameAs": [
-              "https://github.com/mafresh-bb/nextrole-ng"
+              "https://github.com/maadan-dev/nextrole-ng"
             ],
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web Browser",
