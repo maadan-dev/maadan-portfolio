@@ -18,6 +18,18 @@ export function DeveloperTerminal() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [inputVal, setInputVal] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [hasLoaded, setHasLoaded] = useState(() => {
+    if (window.location.pathname === '/' && !sessionStorage.getItem('hasLoaded')) {
+      return false;
+    }
+    return true;
+  });
+
+  useEffect(() => {
+    const handleLoaded = () => setHasLoaded(true);
+    window.addEventListener('portfolio-loaded', handleLoaded);
+    return () => window.removeEventListener('portfolio-loaded', handleLoaded);
+  }, []);
 
   const { messages, sendMessage, status } = useChat({
     messages: [
@@ -53,24 +65,26 @@ export function DeveloperTerminal() {
   return (
     <>
       {/* Floating Action Button */}
-      <motion.button
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1 }}
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 flex items-center justify-center rounded-full shadow-lg"
-        style={{
-          width: 56,
-          height: 56,
-          background: 'rgba(5,5,5,0.9)',
-          border: `1px solid rgba(96,165,250,0.3)`,
-          backdropFilter: 'blur(10px)',
-          display: isOpen ? 'none' : 'flex',
-        }}
-        data-hover
-      >
-        <Terminal size={24} color={ACCENT} />
-      </motion.button>
+      {hasLoaded && (
+        <motion.button
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4 }}
+          onClick={() => setIsOpen(true)}
+          className="fixed bottom-6 right-6 z-50 flex items-center justify-center rounded-full shadow-lg"
+          style={{
+            width: 56,
+            height: 56,
+            background: 'rgba(5,5,5,0.9)',
+            border: `1px solid rgba(96,165,250,0.3)`,
+            backdropFilter: 'blur(10px)',
+            display: isOpen ? 'none' : 'flex',
+          }}
+          data-hover
+        >
+          <Terminal size={24} color={ACCENT} />
+        </motion.button>
+      )}
 
       {/* Terminal Overlay */}
       <AnimatePresence>

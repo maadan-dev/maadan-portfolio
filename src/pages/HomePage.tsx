@@ -23,6 +23,7 @@ export function HomePage() {
     sessionStorage.setItem('hasLoaded', 'true');
     setShowLoader(false);
     setHeroVisible(true);
+    window.dispatchEvent(new Event('portfolio-loaded'));
   };
 
   return (
