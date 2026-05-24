@@ -9,10 +9,10 @@ interface StatusTickerProps {
 }
 
 const ITEMS = [
-  'AVAILABLE FOR WORK',
+  'OPEN FOR FREELANCE',
   'BASED IN LAGOS',
   'SOFTWARE DEVELOPER',
-  'SHIPPING REAL PRODUCTS',
+  'REACT · TYPESCRIPT · GO',
 ];
 
 export default function StatusTicker({ visible }: StatusTickerProps) {

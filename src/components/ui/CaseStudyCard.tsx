@@ -76,6 +76,7 @@ export function CaseStudyCard({ project, index }: CaseStudyCardProps) {
             <video
               src={project.image}
               autoPlay muted loop playsInline
+              preload="metadata"
               className="w-full h-full object-contain bg-[#050505] relative z-10"
             />
           ) : (

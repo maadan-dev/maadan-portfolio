@@ -3,21 +3,21 @@ import type { Project, Metric, SkillCategory } from '../types';
 export const personalInfo = {
   name: "ABDULYEKEEN MAADAN",
   role: "Software Developer",
-  headline: "I build things that work for real people.",
-  subHeadline: "Self-taught developer. I ship products, not just projects. Currently deepening my engineering foundations at Learn2Earn — a 2-year AI software engineering fellowship backed by the co-founder of Andela.",
-  about: "Self-taught developer based in Lagos. I studied Mathematics at FUNAAB, did NYSC as a STEM educator, and taught myself to build by shipping for real clients — not tutorials. I direct AI agents with specific, narrow instructions to produce working products, and I've shipped everything from a full-stack CV optimization tool to client websites for safaris and executives. I solve real problems, ship on deadline, and close the gap between where I am and where I'm going — one project at a time. Starting June 2026, I'm joining Learn2Earn's AI Software Engineering Fellowship to deepen my systems engineering skills over 24 months.",
+  headline: "I don't build demos. I ship products.",
+  subHeadline: "Mathematics graduate turned software developer. Three paid clients shipped, one AI product live with real users, and a competitive fellowship on deck.",
+  about: "I studied Mathematics at FUNAAB — it taught me to break problems into provable steps before writing a line of code. After NYSC as a STEM educator, I taught myself to build by shipping for real clients, not following tutorials.\n\nMy latest product, NextRole NG, is an AI-powered CV optimizer built specifically for the Nigerian job market. It got organic traction on day one — users sharing it in WhatsApp groups unprompted, with zero marketing spend. I've also shipped client websites for luxury safaris and diplomatic executives.\n\nStarting June 2026, I'm joining Learn2Earn's AI Software Engineering Fellowship — selected from ~4,000 Lagos applicants through a 30-day systems programming piscine in Go and Shell.",
   email: "babatundemaadan@gmail.com",
   github: "https://github.com/maadan-dev",
   linkedin: "https://www.linkedin.com/in/abdulyekeenmaadan",
   twitter: "https://x.com/maadan_dev",
   resumePdf: "/resume/Abdulyekeen_Maadan_Resume.pdf",
-  personality: "I prefer solving real problems over building pretty placeholders."
+  personality: "Open to freelance contracts, part-time remote roles, and gig-based work."
 };
 
 export const metrics: Metric[] = [
-  { label: "Clients Shipped", value: "3+ paid projects delivered" },
-  { label: "Latest Build", value: "Full-stack AI product with real users" },
-  { label: "Stack", value: "React · TypeScript · Go · AI-Augmented" }
+  { label: "Paid Clients", value: "3+" },
+  { label: "AI Products Live", value: "1" },
+  { label: "Fellowship Applicants Beaten", value: "~4,000" }
 ];
 
 export const education = {
@@ -56,6 +56,7 @@ export const projects: Project[] = [
     tech: ["Go", "React", "TypeScript", "Tailwind CSS", "Gemini API", "Supabase"],
     image: "/nextrole-ng.mp4",
     link: "https://nextroleng.tech",
+    github: 'https://github.com/maadan-dev/nextrole-ng-frontend',
     featured: true,
     highlights: [
       "Two-phase AI pipeline separating fact extraction from generation to prevent hallucination",

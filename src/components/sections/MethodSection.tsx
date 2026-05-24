@@ -13,11 +13,7 @@ const LINES = [
   [{ text: 'people.', em: false }],
 ];
 
-const STATS = [
-  { value: '3+', label: 'Clients shipped' },
-  { value: '1', label: 'AI product live' },
-  { value: '∞', label: 'Problems to solve' },
-];
+
 
 export function MethodSection() {
   const headRef = useRef<HTMLDivElement>(null);
@@ -100,15 +96,6 @@ export function MethodSection() {
               ))}
             </motion.div>
 
-            {/* Stats */}
-            <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-40px' }} transition={{ duration: 0.7, delay: 0.15 }} style={{ display: 'flex', flexWrap: 'wrap', gap: 'clamp(24px,4vw,48px)', paddingTop: 16, borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-              {STATS.map((s, i) => (
-                <motion.div key={s.label} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }} className="flex flex-col gap-1">
-                  <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 900, fontSize: 'clamp(1.6rem,3vw,2.8rem)', letterSpacing: '-0.02em', color: ACCENT, lineHeight: 1 }}>{s.value}</span>
-                  <span style={{ fontFamily: "'Barlow',sans-serif", fontWeight: 300, fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(250,250,250,0.55)', whiteSpace: 'nowrap' }}>{s.label}</span>
-                </motion.div>
-              ))}
-            </motion.div>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ export function EducationSection() {
 
         {/* Section label */}
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="flex flex-col gap-3 mb-12">
-          <span style={{ fontFamily: "'Barlow',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase', color: `rgba(${AR},0.55)` }}>Foundation</span>
+          <span style={{ fontFamily: "'Barlow',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase', color: `rgba(${AR},0.55)` }}>03 / Foundation</span>
           <div style={{ width: 24, height: 1, background: ACCENT, opacity: 0.4 }} />
         </motion.div>
 

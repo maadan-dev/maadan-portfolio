@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { projects } from '../../data/content';
+import { projects, testimonials } from '../../data/content';
 import { CaseStudyCard } from '../ui/CaseStudyCard';
 
 const ACCENT= '#60a5fa';
@@ -78,7 +78,7 @@ export function CaseStudies() {
             textTransform: 'uppercase',
             lineHeight: 1,
           }}>
-            Systems.
+            Work.
           </span>
           <span style={{
             fontFamily: "'Barlow', sans-serif",
@@ -107,7 +107,7 @@ export function CaseStudies() {
             color: 'rgba(250,250,250,0.5)',
           }}
         >
-          Things I shipped, not just built.
+          Real projects. Real clients. Real results.
         </motion.p>
       </div>
 
@@ -124,6 +124,101 @@ export function CaseStudies() {
           <CaseStudyCard key={project.title} project={project} index={index} />
         ))}
       </div>
+
+      {/* Inline Client Feedback */}
+      {testimonials.length > 0 && (
+        <div
+          style={{
+            maxWidth: 1200,
+            margin: '0 auto',
+            padding: 'clamp(32px, 4vh, 48px) clamp(24px, 5vw, 80px)',
+          }}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-10%' }}
+            transition={{ duration: 0.7, ease: E as any }}
+            style={{
+              position: 'relative',
+              padding: 'clamp(20px, 3vw, 32px)',
+              borderRadius: 8,
+              background: 'rgba(255,255,255,0.015)',
+              border: '1px solid rgba(255,255,255,0.04)',
+              overflow: 'hidden',
+            }}
+          >
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: 3,
+              height: '100%',
+              background: `linear-gradient(to bottom, ${ACCENT}, transparent)`,
+              opacity: 0.4,
+            }} />
+
+            <span style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 500,
+              fontSize: 10,
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: 'rgba(59,130,246,0.5)',
+              display: 'block',
+              marginBottom: 12,
+            }}>Client Feedback</span>
+
+            <p style={{
+              fontSize: 'clamp(0.85rem, 1vw, 0.95rem)',
+              color: 'rgba(250,250,250,0.55)',
+              lineHeight: 1.8,
+              fontWeight: 300,
+              fontStyle: 'italic',
+              marginBottom: 16,
+              maxWidth: 700,
+            }}>
+              "{testimonials[0].quote}"
+            </p>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <div style={{
+                width: 28,
+                height: 28,
+                borderRadius: '50%',
+                background: 'rgba(59,130,246,0.08)',
+                border: '1px solid rgba(59,130,246,0.15)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 700,
+                fontSize: 12,
+                color: ACCENT,
+              }}>
+                {testimonials[0].author.charAt(0)}
+              </div>
+              <div>
+                <span style={{
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontWeight: 600,
+                  fontSize: 13,
+                  color: 'rgba(250,250,250,0.85)',
+                  display: 'block',
+                }}>{testimonials[0].author}</span>
+                <span style={{
+                  fontFamily: "'Barlow', sans-serif",
+                  fontWeight: 300,
+                  fontSize: 10,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(250,250,250,0.45)',
+                }}>{testimonials[0].role}</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
 
       {/* Bottom accent line */}
       <div style={{ height: 1, background: `rgba(59,130,246,0.12)`, marginTop: 'clamp(32px, 4vh, 48px)' }} />
