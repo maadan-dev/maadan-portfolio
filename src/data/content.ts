@@ -6,7 +6,7 @@ export const personalInfo = {
   headline: "I don't build demos. I ship products.",
   subHeadline: "Mathematics graduate turned software developer. Three paid clients shipped, one AI product live with real users, and a competitive fellowship on deck.",
   about: "I studied Mathematics at FUNAAB — it taught me to break problems into provable steps before writing a line of code. After NYSC as a STEM educator, I taught myself to build by shipping for real clients, not following tutorials.\n\nMy latest product, NextRole NG, is an AI-powered CV optimizer built specifically for the Nigerian job market. It got organic traction on day one — users sharing it in WhatsApp groups unprompted, with zero marketing spend. I've also shipped client websites for luxury safaris and diplomatic executives.\n\nStarting June 2026, I'm joining Learn2Earn's AI Software Engineering Fellowship — selected from ~4,000 Lagos applicants through a 30-day systems programming piscine in Go and Shell.",
-  email: "babatundemaadan@gmail.com",
+  email: "maadan.dev@gmail.com",
   github: "https://github.com/maadan-dev",
   linkedin: "https://www.linkedin.com/in/abdulyekeenmaadan",
   twitter: "https://x.com/maadan_dev",

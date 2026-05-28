@@ -70,7 +70,7 @@ export function DeveloperTerminal() {
   const { messages, sendMessage, status } = useChat({
     messages: initialMessages,
     onError: () => {
-      setError("Something went wrong. Try again or reach out directly at babatundemaadan@gmail.com");
+      setError("Something went wrong. Try again or reach out directly at maadan.dev@gmail.com");
     },
   });
 
@@ -101,7 +101,7 @@ export function DeveloperTerminal() {
   useEffect(() => {
     if (isLoading) {
       timeoutRef.current = setTimeout(() => {
-        setError("Taking too long to respond. Try asking again or email babatundemaadan@gmail.com directly.");
+        setError("Taking too long to respond. Try asking again or email maadan.dev@gmail.com directly.");
       }, TIMEOUT_MS);
     } else {
       if (timeoutRef.current) {
