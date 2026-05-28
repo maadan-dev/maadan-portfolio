@@ -52,7 +52,7 @@ export function HomePage() {
             "@type": "Person",
             "name": "Abdulyekeen Maadan",
             "jobTitle": "Software Developer",
-            "url": "https://www.maadan.dev",
+            "url": "https://www.maadan.dev/",
             "image": "https://maadan.dev/images/profile.webp?v=2",
             "sameAs": [
               "https://www.linkedin.com/in/abdulyekeenmaadan",
