@@ -90,8 +90,8 @@ export const projects: Project[] = [
     problem: "A nonprofit foundation needed a professional web presence that clearly communicated their mission, values, and programs to donors and beneficiaries.",
     execution: "Built a 5-page responsive website with clear information architecture, donation CTAs, and a visual identity that reflects the foundation's work in community development.",
     result: "Client said the work was 'visually appealing, top-notch, and exceeded expectations.' The site launched and serves as the foundation's primary public-facing platform.",
-    tech: ["React", "JavaScript", "CSS"],
-    image: "/images/jaytee-fayemi.webp"
+    tech: ["WordPress", "CSS"],
+    image: "/images/JTFfoundation.webp"
   }
 ];
 
