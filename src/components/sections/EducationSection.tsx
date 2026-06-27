@@ -35,17 +35,8 @@ export function EducationSection() {
               <p style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 400, fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(250,250,250,0.55)' }}>{education.institution}</p>
             </motion.div>
 
-            {/* Image */}
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: '-10%' }} transition={{ duration: 0.8 }} className="relative w-full aspect-[4/3] overflow-hidden" style={{ borderRadius: 8, border: '1px solid rgba(255,255,255,0.04)' }}>
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#050505]/70 via-transparent to-transparent z-10" />
-              <img src="/images/convocation.webp" alt="Convocation" loading="lazy" decoding="async" width={800} height={600} className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700" />
-              <div className="absolute bottom-4 left-4 z-20 flex items-center gap-2" style={{ background: 'rgba(5,5,5,0.7)', backdropFilter: 'blur(12px)', padding: '6px 12px', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 999 }}>
-                <div style={{ width: 4, height: 4, borderRadius: '50%', background: ACCENT }} />
-                <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 500, fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(250,250,250,0.7)' }}>Academic Core</span>
-              </div>
-            </motion.div>
           </div>
-
+          
           {/* RIGHT — Fellowship */}
           <div className="flex flex-col gap-8 lg:pt-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.1, ease: E as any }}>
