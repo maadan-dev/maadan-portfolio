@@ -1,19 +1,13 @@
 import { google } from '@ai-sdk/google';
 import { streamText, convertToModelMessages } from 'ai';
-import { SYSTEM_PROMPT } from '../src/data/ai-prompt';
+import { SYSTEM_PROMPT } from '../../../data/ai-prompt';
 
-export const config = {
-  runtime: 'edge',
-};
+export const runtime = 'edge';
 
 const MAX_MESSAGES = 20;
 const MAX_MESSAGE_LENGTH = 2000;
 
-export default async function handler(req: Request) {
-  if (req.method !== 'POST') {
-    return new Response('Method Not Allowed', { status: 405 });
-  }
-
+export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { messages } = body;

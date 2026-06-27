@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useChat } from '@ai-sdk/react';
@@ -52,12 +54,13 @@ export function DeveloperTerminal() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const [hasLoaded, setHasLoaded] = useState(() => {
+  const [hasLoaded, setHasLoaded] = useState(true);
+
+  useEffect(() => {
     if (window.location.pathname === '/' && !sessionStorage.getItem('hasLoaded')) {
-      return false;
+      setHasLoaded(false);
     }
-    return true;
-  });
+  }, []);
 
   useEffect(() => {
     const handleLoaded = () => setHasLoaded(true);

@@ -1,6 +1,9 @@
+"use client";
+
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { personalInfo } from '../../data/content';
 
 const E = [0.16, 1, 0.3, 1] as const;
@@ -8,9 +11,9 @@ const E = [0.16, 1, 0.3, 1] as const;
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-  const isBlogPage = location.pathname.startsWith('/blog') || location.pathname === '/writing';
-  const isHomePage = location.pathname === '/';
+  const pathname = usePathname();
+  const isBlogPage = pathname.startsWith('/blog') || pathname === '/writing';
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +56,7 @@ export function Navigation() {
         }}
       >
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 transition-opacity hover:opacity-80" data-hover>
+        <Link href="/" className="flex items-center gap-2 transition-opacity hover:opacity-80" data-hover>
           <img
             src="/logo_horizontal.png"
             alt="ABDULYEKEEN MAADAN"
@@ -65,16 +68,16 @@ export function Navigation() {
         <nav className="hidden md:flex items-center gap-8">
           {isBlogPage ? (
             <>
-              <Link to="/" data-hover style={navLinkStyle}>Home</Link>
-              <Link to="/#case-studies" data-hover style={navLinkStyle}>Work</Link>
-              <Link to="/#method" data-hover style={navLinkStyle}>About</Link>
-              <Link to="/#contact" data-hover style={navLinkStyle}>Contact</Link>
+              <Link href="/" data-hover style={navLinkStyle}>Home</Link>
+              <Link href="/#case-studies" data-hover style={navLinkStyle}>Work</Link>
+              <Link href="/#method" data-hover style={navLinkStyle}>About</Link>
+              <Link href="/#contact" data-hover style={navLinkStyle}>Contact</Link>
             </>
           ) : (
             <>
               <a href="#case-studies" data-hover style={navLinkStyle}>Work</a>
               <a href="#method" data-hover style={navLinkStyle}>About</a>
-              <Link to="/writing" data-hover style={navLinkStyle}>Writing</Link>
+              <Link href="/writing" data-hover style={navLinkStyle}>Writing</Link>
               <a href="#contact" data-hover style={navLinkStyle}>Contact</a>
             </>
           )}
@@ -124,16 +127,16 @@ export function Navigation() {
       >
         {isBlogPage ? (
           <>
-            <Link to="/" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Home</Link>
-            <Link to="/#case-studies" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Work</Link>
-            <Link to="/#method" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>About</Link>
-            <Link to="/#contact" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Contact</Link>
+            <Link href="/" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Home</Link>
+            <Link href="/#case-studies" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Work</Link>
+            <Link href="/#method" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>About</Link>
+            <Link href="/#contact" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Contact</Link>
           </>
         ) : (
           <>
             <a href="#case-studies" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Work</a>
             <a href="#method" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>About</a>
-            <Link to="/writing" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Writing</Link>
+            <Link href="/writing" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Writing</Link>
             <a href="#contact" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Contact</a>
           </>
         )}

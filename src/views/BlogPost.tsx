@@ -1,6 +1,8 @@
-import { Link, useParams, Navigate } from 'react-router-dom';
+"use client";
+
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import { useRef } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { posts } from '../data/blog';
@@ -13,38 +15,19 @@ const postContent: Record<string, React.ComponentType> = {
   'motivation-is-a-bug': MotivationPost,
 };
 
-export function BlogPost() {
-  const { slug } = useParams<{ slug: string }>();
+export function BlogPost({ slug: propSlug }: { slug?: string }) {
+  const params = useParams();
+  const slug = propSlug || params.slug as string;
   const contentRef = useRef<HTMLDivElement>(null!);
   const post = posts.find((p) => p.slug === slug);
   const ContentComponent = slug ? postContent[slug] : null;
 
   if (!post || !ContentComponent) {
-    return <Navigate to="/writing" replace />;
+    return null;
   }
 
   return (
     <div>
-      <Helmet>
-        <title>{post.title} | Abdulyekeen Maadan</title>
-        <meta name="description" content={post.subtitle} />
-        <meta property="og:title" content={`${post.title} | Abdulyekeen Maadan`} />
-        <meta property="og:description" content={post.subtitle} />
-        <meta property="og:image" content={`https://www.maadan.dev${post.ogImage}`} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content={`Preview of ${post.title}`} />
-        <meta property="og:url" content={`https://www.maadan.dev/blog/${post.slug}`} />
-        <meta property="og:type" content="article" />
-        <meta property="article:author" content="Abdulyekeen Maadan" />
-        <meta property="article:published_time" content={new Date(post.date).toISOString()} />
-        <meta property="article:section" content={post.category} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${post.title} | Abdulyekeen Maadan`} />
-        <meta name="twitter:description" content={post.subtitle} />
-        <meta name="twitter:image" content={`https://www.maadan.dev${post.ogImage}`} />
-        <meta name="twitter:image:alt" content={`Preview of ${post.title}`} />
-      </Helmet>
       <article className="min-h-screen pt-32 pb-24 px-6 md:px-12">
       <div className="max-w-3xl mx-auto">
         {/* Back link */}
@@ -54,7 +37,7 @@ export function BlogPost() {
           transition={{ duration: 0.5 }}
         >
           <Link
-            to="/writing"
+            href="/writing"
             className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-text-secondary hover:text-text-primary transition-colors mb-12 group"
           >
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
@@ -114,7 +97,7 @@ export function BlogPost() {
             "The room you’re in is already deciding how far you go."
           </p>
           <Link
-            to="/#contact"
+            href="/#contact"
             className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-widest bg-text-primary text-background px-6 py-3 rounded-full hover:opacity-90 transition-all no-underline"
           >
             Start a Conversation

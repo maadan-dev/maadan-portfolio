@@ -26,7 +26,7 @@ export function MotivationPost() {
       <hr className="my-12 border-border/30" />
 
       <p>
-        In June, I’m starting a 2-year AI Software Engineering Fellowship. No instructors. No hand-holding. Just complex problems in Go, Rust, and C++, and a room full of people trying to figure it out at the same time.
+        In July, I’m starting a 2-year AI Software Engineering Fellowship. No instructors. No hand-holding. Just complex problems in Go, Rust, and C++, and a room full of people trying to figure it out at the same time.
       </p>
       <p>
         It starts with the Piscine — a one-month pressure test. No safety net. Just you, the problems, and everyone else pushing through theirs.

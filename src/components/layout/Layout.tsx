@@ -1,5 +1,7 @@
+"use client";
+
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 import Lenis from 'lenis';
 import { Navigation } from './Navigation';
 import { Footer } from './Footer';
@@ -10,8 +12,8 @@ interface LayoutProps {
 }
 
 export function Layout({ children }: LayoutProps) {
-  const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const lenis = new Lenis({

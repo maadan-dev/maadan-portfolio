@@ -1,29 +1,13 @@
-import { Link } from 'react-router-dom';
+"use client";
+
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import { posts } from '../data/blog';
 
 export function WritingPage() {
   return (
     <>
-      <Helmet>
-        <title>Writing | Abdulyekeen Maadan</title>
-        <meta name="description" content="Thoughts on systems, engineering, and personal growth. Essays on software development, AI, and building real products." />
-        <meta property="og:title" content="Writing | Abdulyekeen Maadan" />
-        <meta property="og:description" content="Thoughts on systems, engineering, and personal growth. Essays on software development, AI, and building real products." />
-        <meta property="og:image" content="https://maadan.dev/og/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Writing archive preview" />
-        <meta property="og:url" content="https://www.maadan.dev/writing" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Writing | Abdulyekeen Maadan" />
-        <meta name="twitter:description" content="Thoughts on systems, engineering, and personal growth." />
-        <meta name="twitter:image" content="https://maadan.dev/og/og-image.jpg" />
-        <meta name="twitter:image:alt" content="Writing archive preview" />
-      </Helmet>
       <main className="min-h-screen pt-32 pb-24 px-6 md:px-12 bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -50,7 +34,7 @@ export function WritingPage() {
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               className="group border-b border-border/50 pb-12"
             >
-              <Link to={`/blog/${post.slug}`} className="block">
+              <Link href={`/blog/${post.slug}`} className="block">
                 <div className="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-8 mb-4">
                   <span className="font-mono text-xs uppercase tracking-widest text-accent shrink-0">
                     {post.category}

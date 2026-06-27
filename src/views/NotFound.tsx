@@ -1,16 +1,12 @@
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+"use client";
+
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Home } from 'lucide-react';
 
 export function NotFound() {
   return (
     <>
-      <Helmet>
-        <title>Page Not Found | Abdulyekeen Maadan</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Return to Abdulyekeen Maadan's portfolio." />
-        <meta name="robots" content="noindex, follow" />
-      </Helmet>
       <main className="min-h-screen flex items-center justify-center px-6 md:px-12 bg-background">
         <div className="text-center">
           <motion.div
@@ -29,7 +25,7 @@ export function NotFound() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/"
+                href="/"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors"
               >
                 <Home className="w-4 h-4" />
