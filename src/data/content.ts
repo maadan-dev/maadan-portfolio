@@ -4,8 +4,8 @@ export const personalInfo = {
   name: "ABDULYEKEEN MAADAN",
   role: "Software Developer",
   headline: "I don't build demos. I ship products.",
-  subHeadline: "Mathematics graduate turned software developer. Four paid clients shipped, one AI product built and launched, and a competitive fellowship starting July.",
-  about: "I studied Mathematics at FUNAAB — it taught me to break problems into provable steps before writing a line of code. After NYSC as a STEM educator, I taught myself to build by shipping for real clients, not following tutorials.\n\nMy latest product, NextRole NG, is an AI-powered CV optimizer built specifically for the Nigerian job market. It got organic traction on day one — users sharing it in WhatsApp groups unprompted, with zero marketing spend. Currently paused while I focus on the fellowship. I've also shipped client websites for luxury safaris, nonprofit foundations, and diplomatic executives.\n\nStarting July 2026, I'm joining Learn2Earn's AI Software Engineering Fellowship — selected from ~4,000 Lagos applicants through a 30-day systems programming piscine in Go and Shell.",
+  subHeadline: "Mathematics graduate turned software developer. Incoming Fellow at the Learn2Earn AI Software Engineering Fellowship (selected from ~4,000 applicants) — building production-grade web applications and systems.",
+  about: "I studied Mathematics at FUNAAB — it taught me to break problems into provable steps before writing a line of code. After NYSC as a STEM educator, I taught myself to build by shipping for real clients, not following tutorials.\n\nMy latest product, NextRole NG, is an AI-powered CV optimizer built specifically for the Nigerian job market. It got organic traction on day one — users sharing it in WhatsApp groups unprompted, with zero marketing spend. On hold — active development resumes post-fellowship. I've also shipped client websites for luxury safaris, nonprofit foundations, and diplomatic executives.\n\nStarting July 2026, I'm joining Learn2Earn's AI Software Engineering Fellowship — selected from ~4,000 Lagos applicants through a 30-day systems programming piscine in Go and Shell.",
   email: "maadan.dev@gmail.com",
   github: "https://github.com/maadan-dev",
   linkedin: "https://www.linkedin.com/in/abdulyekeenmaadan",
@@ -14,11 +14,6 @@ export const personalInfo = {
   personality: "Open to freelance contracts, part-time remote roles, and gig-based work."
 };
 
-export const metrics: Metric[] = [
-  { label: "Paid Clients", value: "4+" },
-  { label: "AI Products Shipped", value: "1" },
-  { label: "Fellowship Selection", value: "~4,000 applicants" }
-];
 
 export const education = {
   degree: "B.Sc. Mathematics",
@@ -52,7 +47,7 @@ export const projects: Project[] = [
     role: "Sole Developer — Full-Stack",
     problem: "Nigerian graduates send one generic CV to every role — Sales, Tech, Admin, Graduate Trainee programs. Global tools like Teal and Resume Worded don't understand NYSC, GTBank's 2:1 requirement, or Lagos private sector CV conventions.",
     execution: "Built a two-phase Gemini AI pipeline: Phase 1 extracts verified CV facts, Phase 2 generates tailored rewrites and strategy. SSE streaming shows real results in ~15 seconds. Handles Canva CVs via multimodal PDF extraction. Click-to-edit inline CV editor with live PDF sync.",
-    result: "Launched April 13, 2026. Got organic traction on day one — real users sharing it in WhatsApp groups unprompted. No marketing spend. Currently paused while I focus on the fellowship.",
+    result: "Launched April 13, 2026. Got organic traction on day one — real users sharing it in WhatsApp groups unprompted. No marketing spend. On hold — active development resumes post-fellowship.",
     tech: ["Go", "React", "TypeScript", "Tailwind CSS", "Gemini API", "Supabase"],
     image: "/nextrole-ng.mp4",
     link: "https://nextroleng.tech",

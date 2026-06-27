@@ -127,7 +127,7 @@ export function ContactSection() {
             <div className="flex flex-col gap-8">
               <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="flex items-center gap-4">
                 <div style={{ width: 24, height: 1, background: ACCENT, opacity: 0.5 }} />
-                <span style={{ fontFamily: "'Barlow',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase', color: `rgba(${AR},0.55)` }}>04 / Contact</span>
+                <span style={{ fontFamily: "'Barlow',sans-serif", fontWeight: 400, fontSize: 10, letterSpacing: '0.32em', textTransform: 'uppercase', color: `rgba(${AR},0.55)` }}>05 / Contact</span>
               </motion.div>
 
               <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease: E as any }} style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: 'clamp(2.5rem,7vw,5rem)', letterSpacing: '-0.02em', textTransform: 'uppercase', lineHeight: 0.92, color: 'rgba(250,250,250,0.95)', margin: 0 }}>

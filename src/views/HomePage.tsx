@@ -7,6 +7,7 @@ import { MetricsBar } from '../components/sections/MetricsBar';
 import { CaseStudies } from '../components/sections/CaseStudies';
 import { MethodSection } from '../components/sections/MethodSection';
 import { EducationSection } from '../components/sections/EducationSection';
+import { WritingPreviewSection } from '../components/sections/WritingPreviewSection';
 import { ContactSection } from '../components/sections/ContactSection';
 import Loader from '../components/ui/Loader';
 
@@ -79,6 +80,7 @@ export function HomePage() {
           <CaseStudies />
           <MethodSection />
           <EducationSection />
+          <WritingPreviewSection />
           <ContactSection />
         </div>
       </div>

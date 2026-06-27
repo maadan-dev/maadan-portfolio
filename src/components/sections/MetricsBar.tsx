@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { metrics } from '../../data/content';
 
 const ACCENT= '#60a5fa';
 const E = [0.16, 1, 0.3, 1] as const;
@@ -33,53 +32,31 @@ export function MetricsBar() {
         style={{
           maxWidth: 1200,
           margin: '0 auto',
-          padding: 'clamp(32px, 5vh, 56px) clamp(24px, 5vw, 80px)',
+          padding: 'clamp(32px, 5vh, 48px) clamp(24px, 5vw, 80px)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
-        <div
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-10%' }}
+          transition={{ duration: 0.8, ease: E as any }}
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: 'clamp(24px, 4vw, 48px)',
+            fontFamily: "'Barlow Condensed', sans-serif",
+            fontWeight: 400,
+            fontSize: 'clamp(1rem, 1.8vw, 1.25rem)',
+            letterSpacing: '0.04em',
+            lineHeight: 1.6,
+            color: 'rgba(250,250,250,0.7)',
+            textTransform: 'uppercase',
+            textAlign: 'center',
+            maxWidth: 800,
           }}
         >
-          {metrics.map((metric, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-10%' }}
-              transition={{ delay: index * 0.12, duration: 0.7, ease: E as any }}
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 6,
-                paddingLeft: index > 0 ? 'clamp(16px, 3vw, 32px)' : 0,
-                borderLeft: index > 0 ? '1px solid rgba(255,255,255,0.06)' : 'none',
-              }}
-            >
-              <span style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 400,
-                fontSize: 10,
-                letterSpacing: '0.3em',
-                textTransform: 'uppercase',
-                color: 'rgba(59,130,246,0.5)',
-              }}>
-                {metric.label}
-              </span>
-              <span style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 700,
-                fontSize: 'clamp(1rem, 2vw, 1.4rem)',
-                letterSpacing: '0.04em',
-                color: 'rgba(250,250,250,0.8)',
-              }}>
-                {metric.value}
-              </span>
-            </motion.div>
-          ))}
-        </div>
+          Selected from <span style={{ color: ACCENT, fontWeight: 600 }}>~4,000 applicants</span> for a rigorous 2-year Software Engineering Fellowship — training in systems engineering while active for part-time remote roles and select contracts.
+        </motion.p>
       </div>
 
       {/* Bottom line */}
