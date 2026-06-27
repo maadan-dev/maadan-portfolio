@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://maadan.dev/</loc>
+    <loc>https://www.maadan.dev/</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://maadan.dev/writing</loc>
+    <loc>https://www.maadan.dev/writing</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://maadan.dev/blog/hallucination-architecture</loc>
+    <loc>https://www.maadan.dev/blog/hallucination-architecture</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://maadan.dev/blog/motivation-is-a-bug</loc>
+    <loc>https://www.maadan.dev/blog/motivation-is-a-bug</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

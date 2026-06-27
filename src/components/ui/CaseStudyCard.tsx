@@ -57,10 +57,10 @@ export function CaseStudyCard({ project, index }: CaseStudyCardProps) {
       {/* Image/Video */}
       <div className={`md:col-span-6 relative ${isEven ? 'md:order-1' : 'md:order-2'}`}>
         <motion.a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          data-hover
+          href={project.link || undefined}
+          target={project.link ? "_blank" : undefined}
+          rel={project.link ? "noopener noreferrer" : undefined}
+          data-hover={!!project.link}
           className={`block relative overflow-hidden bg-[#0a0a0a] w-full ${
             isAnimated ? 'aspect-auto' : 'aspect-[16/10]'
           }`}
@@ -176,28 +176,30 @@ export function CaseStudyCard({ project, index }: CaseStudyCardProps) {
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginTop: 4 }}>
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-hover
-            style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 600,
-              fontSize: 12,
-              letterSpacing: '0.18em',
-              textTransform: 'uppercase',
-              color: 'rgba(250,250,250,0.8)',
-              textDecoration: 'none',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 6,
-              transition: 'color 0.2s ease',
-            }}
-          >
-            View Live
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </a>
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-hover
+              style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 600,
+                fontSize: 12,
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                color: 'rgba(250,250,250,0.8)',
+                textDecoration: 'none',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 6,
+                transition: 'color 0.2s ease',
+              }}
+            >
+              View Live
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+          )}
           {project.github && (
             <a
               href={project.github}

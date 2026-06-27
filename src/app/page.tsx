@@ -50,23 +50,23 @@ export default function HomeRoute() {
           })
         }}
       />
-      {/* Organization JSON-LD */}
+      {/* SoftwareApplication JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
+            "@type": "SoftwareApplication",
             "name": "NextRole NG",
             "url": "https://nextroleng.tech",
-            "logo": "https://maadan.dev/images/nextrole.webp",
+            "image": "https://www.maadan.dev/images/nextrole.webp",
             "description": "AI-powered CV optimization tool for the Nigerian job market",
-            "founder": {
+            "author": {
               "@type": "Person",
               "name": "Abdulyekeen Maadan"
             },
             "sameAs": [
-              "https://github.com/maadan-dev/nextrole-ng"
+              "https://github.com/maadan-dev/nextrole-ng-frontend"
             ]
           })
         }}

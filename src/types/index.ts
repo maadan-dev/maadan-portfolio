@@ -6,7 +6,7 @@ export interface Project {
   result: string;
   tech: string[];
   image: string;
-  link: string;
+  link?: string;
   featured?: boolean;
   highlights?: string[];
   github?: string;

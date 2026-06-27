@@ -107,7 +107,7 @@ export function CaseStudies() {
             color: 'rgba(250,250,250,0.5)',
           }}
         >
-          Real projects. Real clients. Real results.
+          Shipped products and client work.
         </motion.p>
       </div>
 
