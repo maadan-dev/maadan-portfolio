@@ -10,7 +10,7 @@ export const personalInfo = {
   github: "https://github.com/maadan-dev",
   linkedin: "https://www.linkedin.com/in/abdulyekeenmaadan",
   twitter: "https://x.com/maadan_dev",
-  resumePdf: "https://resume.maadan.dev",
+  resumePdf: "/resume",
   personality: "Open to freelance contracts, part-time remote roles, and gig-based work."
 };
 
