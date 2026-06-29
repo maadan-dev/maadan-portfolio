@@ -28,5 +28,14 @@ export const posts: PostMeta[] = [
     readTime: "4 min read",
     category: "Philosophy",
     ogImage: "/og/blog/motivation-is-a-bug.jpg"
+  },
+  {
+    slug: "client-side-pdf-generator",
+    title: "How I Built a Client-Side Legal Document Generator",
+    subtitle: "A Lagos agribusiness needed land contracts automated. Here's how I did it entirely in the browser — no backend, no server costs.",
+    date: "June 29, 2026",
+    readTime: "7 min read",
+    category: "Engineering Deep Dive",
+    ogImage: "/og/og-image.jpg"
   }
 ];

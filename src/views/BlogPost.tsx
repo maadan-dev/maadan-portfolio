@@ -8,11 +8,14 @@ import { ArrowLeft } from 'lucide-react';
 import { posts } from '../data/blog';
 import { HallucinationPost } from '../components/blog/posts/HallucinationPost';
 import { MotivationPost } from '../components/blog/posts/MotivationPost';
+import { DavidorlahPost } from '../components/blog/posts/DavidorlahPost';
 import { TableOfContents } from '../components/blog/TableOfContents';
+import { PostInteractions } from '../components/blog/PostInteractions';
 
 const postContent: Record<string, React.ComponentType> = {
   'hallucination-architecture': HallucinationPost,
   'motivation-is-a-bug': MotivationPost,
+  'client-side-pdf-generator': DavidorlahPost,
 };
 
 export function BlogPost({ slug: propSlug }: { slug?: string }) {
@@ -84,6 +87,9 @@ export function BlogPost({ slug: propSlug }: { slug?: string }) {
         >
           <ContentComponent />
         </motion.div>
+
+        {/* Post Interactions (Views, Claps, Shares) */}
+        <PostInteractions slug={slug} title={post.title} />
 
         {/* CTA */}
         <motion.div
