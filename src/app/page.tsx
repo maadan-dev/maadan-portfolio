@@ -7,10 +7,9 @@ export default function HomeRoute() {
       <div className="sr-only">
         <h1>Abdulyekeen Maadan — Software Developer, Lagos, Nigeria</h1>
         <p>
-          Software developer based in Lagos. I build real products for real
-          clients using React, TypeScript, Go, and AI-augmented workflows.
-          Currently shipping NextRole NG — a full-stack CV optimization tool
-          for the Nigerian job market.
+          Software developer based in Lagos. I build production software for real
+          clients using React, TypeScript, and Go. Open for freelance and
+          part-time remote work.
         </p>
       </div>
       <div data-nosnippet>
