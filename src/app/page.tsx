@@ -14,8 +14,8 @@ export default function HomeRoute() {
                 "@type": "WebSite",
                 "@id": "https://www.maadan.dev/#website",
                 "url": "https://www.maadan.dev/",
-                "name": "Abdulyekeen Maadan · Frontend & Go Developer",
-                "alternateName": ["Maadan", "Yekeen", "maadan.dev", "www.maadan.dev"],
+                "name": "Maadan Dev",
+                "alternateName": ["Abdulyekeen Maadan", "Maadan", "Yekeen", "maadan.dev", "www.maadan.dev"],
                 "publisher": {
                   "@id": "https://www.maadan.dev/#person"
                 }
@@ -55,6 +55,14 @@ export default function HomeRoute() {
                 "url": "https://nextroleng.tech",
                 "image": "https://www.maadan.dev/images/nextrole.webp",
                 "description": "AI-powered CV optimization tool for the Nigerian job market",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Web",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "NGN",
+                  "availability": "https://schema.org/Discontinued"
+                },
                 "author": {
                   "@id": "https://www.maadan.dev/#person"
                 },
@@ -66,6 +74,16 @@ export default function HomeRoute() {
           })
         }}
       />
+      {/* Server-rendered content for crawlers — matches meta description */}
+      <div className="sr-only">
+        <h1>Abdulyekeen Maadan — Software Developer, Lagos, Nigeria</h1>
+        <p>
+          Software developer based in Lagos. I build real products for real
+          clients using React, TypeScript, Go, and AI-augmented workflows.
+          Currently shipping NextRole NG — a full-stack CV optimization tool
+          for the Nigerian job market.
+        </p>
+      </div>
       <HomePage />
     </>
   );

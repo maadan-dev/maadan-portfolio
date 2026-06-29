@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://www.maadan.dev/',
-    siteName: 'Abdulyekeen Maadan',
+    siteName: 'Maadan Dev',
     title: 'Abdulyekeen Maadan — Software Developer',
     description: 'Software developer based in Lagos. Building real products with React, TypeScript, Go, and AI-augmented workflows.',
     images: [

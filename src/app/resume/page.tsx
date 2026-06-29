@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Mathematics graduate turned software developer. Incoming Fellow at the Learn2Earn AI Software Engineering Fellowship. Ships React, TypeScript, and Go applications.',
     type: 'website',
     url: 'https://www.maadan.dev/resume',
-    siteName: 'Abdulyekeen Maadan · Frontend & Go Developer — Resume',
+    siteName: 'Maadan Dev',
     images: [
       {
         url: '/og/og-image.jpg?v=2',
