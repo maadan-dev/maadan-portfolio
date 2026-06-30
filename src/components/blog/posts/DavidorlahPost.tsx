@@ -38,7 +38,7 @@ export function DavidorlahPost() {
         This library renders PDF documents inside the browser using React components. The entire pipeline runs on the user's CPU:
       </p>
       
-      <div className="my-8 p-6 rounded-lg bg-surface border border-border/50 font-mono text-sm overflow-x-auto text-accent">
+      <div className="my-8 p-4 md:p-6 rounded-lg bg-surface border border-border/50 font-mono text-xs md:text-sm overflow-x-auto text-accent whitespace-pre-wrap md:whitespace-nowrap leading-relaxed">
         User fills form → React state updates → Calculations run instantly → @react-pdf renders in browser → PDF blob downloads directly
       </div>
 
@@ -133,14 +133,14 @@ function calculateTotals(plots: number, deposit?: number) {
       <p><strong>Input:</strong> client name(s), address, number of plots, payment type, date.</p>
       <p><strong>Output:</strong> two legally structured, correctly calculated, print-ready PDF documents — generated in under two seconds, entirely in the browser.</p>
       <p>The summary card updates live as you type. All figures recalculate in real time. Both PDFs download with one click after generation.</p>
-      <p>The tool is hosted as a demo at <a href="https://tools.maadan.dev" target="_blank" rel="noopener noreferrer">tools.maadan.dev</a> under the client's branding before handover.</p>
+      <p>The tool is hosted as a demo at <a href="https://tools.maadan.dev" target="_blank" rel="noopener noreferrer">Maadan Tools</a> under the client's branding before handover.</p>
 
       <h2>Takeaways</h2>
-      <ul className="list-disc pl-6 mb-6">
-        <li className="mb-2"><strong>Host your fonts locally.</strong> CDN font URLs break silently and at the worst possible time. Serve from <code>/public/fonts/</code> and eliminate the dependency.</li>
-        <li className="mb-2"><strong>Know your renderer's limitations before you start.</strong> <code>@react-pdf/renderer</code> is powerful but it has sharp edges — ligatures, hyphenation, and page overflow all behave differently than you'd expect from a browser layout engine. Read the internals before you hit them as bugs.</li>
-        <li className="mb-2"><strong>Client-side PDF generation is underused.</strong> Most developers default to backend solutions out of habit. For document generators handling sensitive data with moderate complexity, running everything in the browser is faster, cheaper, and more private.</li>
-        <li className="mb-2"><strong>The boring problems are the expensive ones.</strong> None of these bugs were architecturally interesting. They were font encoding, string formatting, and page container scoping. But each one would have made the tool look broken in front of a paying client. The craft is in catching all of them.</li>
+      <ul className="list-disc pl-6 mb-6 break-words space-y-3">
+        <li><strong>Host your fonts locally.</strong> CDN font URLs break silently and at the worst possible time. Serve from <code className="break-all md:break-normal">/public/fonts/</code> and eliminate the dependency.</li>
+        <li><strong>Know your renderer's limitations before you start.</strong> <code className="break-all md:break-normal">@react-pdf/renderer</code> is powerful but it has sharp edges — ligatures, hyphenation, and page overflow all behave differently than you'd expect from a browser layout engine. Read the internals before you hit them as bugs.</li>
+        <li><strong>Client-side PDF generation is underused.</strong> Most developers default to backend solutions out of habit. For document generators handling sensitive data with moderate complexity, running everything in the browser is faster, cheaper, and more private.</li>
+        <li><strong>The boring problems are the expensive ones.</strong> None of these bugs were architecturally interesting. They were font encoding, string formatting, and page container scoping. But each one would have made the tool look broken in front of a paying client. The craft is in catching all of them.</li>
       </ul>
 
       <div className="mt-16 pt-8 border-t border-border/50 italic text-sm text-text-secondary">
