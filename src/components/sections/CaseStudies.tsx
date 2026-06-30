@@ -1,14 +1,19 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { projects, testimonials } from '../../data/content';
-import { CaseStudyCard } from '../ui/CaseStudyCard';
+import { ArrowUpRight } from 'lucide-react';
+import { Badge } from '../ui/Badge';
 
-const ACCENT= '#60a5fa';
+const ACCENT = '#60a5fa';
 const E = [0.16, 1, 0.3, 1] as const;
 
 export function CaseStudies() {
   const headRef = useRef<HTMLDivElement>(null);
   const headInView = useInView(headRef, { once: true, margin: '-60px' });
+
+  // Split projects by featured status
+  const spotlightProjects = projects.filter(p => p.featured);
+  const clientProjects = projects.filter(p => !p.featured);
 
   return (
     <section id="case-studies" className="relative w-full" style={{ background: '#050505' }}>
@@ -111,18 +116,192 @@ export function CaseStudies() {
         </motion.p>
       </div>
 
-      {/* Cards */}
+      {/* Spotlight Products Section (2-Column Grid) */}
       <div
         style={{
           maxWidth: 1200,
           margin: '0 auto',
-          padding: '0 clamp(24px, 5vw, 80px)',
+          padding: '0 clamp(24px, 5vw, 80px) 64px',
           borderTop: '1px solid rgba(255,255,255,0.04)',
         }}
       >
-        {projects.map((project, index) => (
-          <CaseStudyCard key={project.title} project={project} index={index} />
-        ))}
+        <h4 className="font-mono text-[10px] tracking-widest text-zinc-500 uppercase mb-8 mt-12">
+          Featured Products & Systems
+        </h4>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          {spotlightProjects.map((project, idx) => {
+            const isVideo = project.image.endsWith('.mp4') || project.image.endsWith('.webm');
+            return (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-10%' }}
+                transition={{ duration: 0.7, delay: idx * 0.1, ease: E as any }}
+                className="group relative bg-zinc-950/40 border border-zinc-900 rounded-3xl p-6 flex flex-col gap-6 transition-all duration-300 hover:border-zinc-800 hover:shadow-2xl hover:shadow-[#60a5fa]/5 hover:-translate-y-1"
+              >
+                {/* Visual Media Container */}
+                <div className="relative overflow-hidden w-full aspect-[16/10] bg-zinc-900/50 rounded-2xl border border-zinc-900 group-hover:border-zinc-800 transition-colors">
+                  {isVideo ? (
+                    <video
+                      src={project.image}
+                      autoPlay muted loop playsInline
+                      preload="metadata"
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                    />
+                  )}
+                  <div className="absolute top-3 left-3 z-20">
+                    <Badge variant="solid">Spotlight</Badge>
+                  </div>
+                </div>
+
+                {/* Text Details */}
+                <div className="flex flex-col gap-3 flex-grow">
+                  <div className="flex justify-between items-start gap-4">
+                    <div>
+                      <h3 className="font-display font-semibold text-2xl text-zinc-100 group-hover:text-[#60a5fa] transition-colors leading-tight uppercase tracking-tight">
+                        {project.title}
+                      </h3>
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-zinc-500 block mt-1">
+                        {project.role}
+                      </span>
+                    </div>
+
+                    {project.link && (
+                      <a 
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-[#60a5fa] transition-all shrink-0"
+                      >
+                        <ArrowUpRight className="w-4 h-4" />
+                      </a>
+                    )}
+                  </div>
+
+                  <p className="text-sm text-zinc-400 leading-relaxed font-light mt-1">
+                    {project.result}
+                  </p>
+
+                  {/* Highlights Bullet List */}
+                  {project.highlights && (
+                    <ul className="flex flex-col gap-2 mt-2 pt-4 border-t border-zinc-900">
+                      {project.highlights.slice(0, 2).map((h, i) => (
+                        <li key={i} className="flex gap-2 text-xs text-zinc-500 leading-normal">
+                          <span className="text-[#60a5fa] shrink-0 select-none font-bold">·</span>
+                          <span>{h}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+
+                {/* Tech Chips & GitHub */}
+                <div className="flex justify-between items-center gap-4 mt-auto pt-4 border-t border-zinc-900">
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.tech.slice(0, 3).map(tech => (
+                      <span key={tech} className="font-mono text-[9px] px-2.5 py-1 bg-zinc-900/60 border border-zinc-800/80 rounded-full text-zinc-450">
+                        {tech}
+                      </span>
+                    ))}
+                    {project.tech.length > 3 && (
+                      <span className="font-mono text-[9px] px-2.5 py-1 bg-transparent text-zinc-600">
+                        +{project.tech.length - 3} more
+                      </span>
+                    )}
+                  </div>
+
+                  {project.github && (
+                    <a 
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-[10px] uppercase tracking-wider text-zinc-500 hover:text-[#60a5fa] transition-colors"
+                    >
+                      Source Code
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Client Projects Section (3-Column Grid) */}
+      <div
+        style={{
+          maxWidth: 1200,
+          margin: '0 auto',
+          padding: '0 clamp(24px, 5vw, 80px) 48px',
+        }}
+      >
+        <h4 className="font-mono text-[10px] tracking-widest text-zinc-500 uppercase mb-8 mt-12 pt-12 border-t border-zinc-900">
+          Client Contracts & Web Projects
+        </h4>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {clientProjects.map((project, idx) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-5%' }}
+              transition={{ duration: 0.6, delay: idx * 0.08, ease: E as any }}
+              className="group relative bg-zinc-950/10 border border-zinc-900/60 rounded-2xl p-5 flex flex-col gap-4 transition-all duration-300 hover:border-zinc-800 hover:bg-zinc-950/40"
+            >
+              {/* Media preview - simplified */}
+              <div className="relative overflow-hidden w-full aspect-[16/9] bg-zinc-900/30 rounded-xl border border-zinc-900 group-hover:border-zinc-800 transition-colors">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-500"
+                />
+              </div>
+
+              {/* Text */}
+              <div className="flex flex-col gap-2 flex-grow">
+                <div className="flex justify-between items-start gap-3">
+                  <h3 className="font-display font-semibold text-lg text-zinc-200 group-hover:text-[#60a5fa] transition-colors leading-tight uppercase">
+                    {project.title}
+                  </h3>
+                  {project.link && (
+                    <a 
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-zinc-500 hover:text-white transition-colors"
+                    >
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
+                  )}
+                </div>
+                <span className="font-mono text-[9px] uppercase tracking-wider text-zinc-500 block">
+                  {project.role}
+                </span>
+                <p className="text-xs text-zinc-400 leading-relaxed font-light mt-1">
+                  {project.result}
+                </p>
+              </div>
+
+              {/* Footer Tech Tags */}
+              <div className="flex flex-wrap gap-1.5 pt-3 border-t border-zinc-900/60 mt-auto">
+                {project.tech.map(tech => (
+                  <span key={tech} className="font-mono text-[8.5px] px-2 py-0.5 bg-zinc-900/40 border border-zinc-800/60 rounded-md text-zinc-500">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
       {/* Inline Client Feedback */}
@@ -142,9 +321,9 @@ export function CaseStudies() {
             style={{
               position: 'relative',
               padding: 'clamp(20px, 3vw, 32px)',
-              borderRadius: 8,
-              background: 'rgba(255,255,255,0.015)',
-              border: '1px solid rgba(255,255,255,0.04)',
+              borderRadius: 16,
+              background: 'rgba(255,255,255,0.01)',
+              border: '1px solid rgba(255,255,255,0.03)',
               overflow: 'hidden',
             }}
           >

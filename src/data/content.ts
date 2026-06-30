@@ -66,8 +66,8 @@ export const projects: Project[] = [
     execution: "Engineered a zero-backend, fully client-side generator using Next.js and @react-pdf/renderer. Resolved complex PDF ligature rendering bugs (GSUB font table stripping) and built a dynamic calculations engine for document clauses.",
     result: "Generates print-ready Deeds of Assignment and Farm Management Agreements in under 2 seconds. Runs entirely in the client's browser, preserving 100% data privacy.",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-    image: "/images/davidorlah_logo.png",
-    link: "/blog/client-side-pdf-generator",
+    image: "/images/davidorlah-generator.webp",
+    link: "https://tools.maadan.dev/davidorlah",
     featured: true,
     highlights: [
       "100% client-side compilation ensuring zero sensitive data leaves the device",
