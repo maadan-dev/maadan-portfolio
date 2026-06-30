@@ -26,10 +26,11 @@ export const metadata: Metadata = {
     default: 'Abdulyekeen Maadan | Software Developer — Lagos, Nigeria',
     template: '%s | Abdulyekeen Maadan',
   },
-  description: 'Software developer based in Lagos. I build production software for real clients using React, TypeScript, and Go. Open for freelance and part-time remote work.',
+  description: 'Software developer based in Lagos. I build production software for real clients using Next.js, React, TypeScript, and Go. Open for freelance and part-time remote work.',
   keywords: [
     'Software Developer',
     'Frontend Developer',
+    'Next.js',
     'React',
     'TypeScript',
     'Go',
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
     url: 'https://www.maadan.dev/',
     siteName: 'Maadan Dev',
     title: 'Abdulyekeen Maadan — Software Developer',
-    description: 'Software developer based in Lagos. I build production software for real clients using React, TypeScript, and Go. Open for freelance and part-time remote work.',
+    description: 'Software developer based in Lagos. I build production software for real clients using Next.js, React, TypeScript, and Go. Open for freelance and part-time remote work.',
     images: [
       {
         url: '/og/og-image.jpg?v=2',
@@ -75,7 +76,7 @@ export const metadata: Metadata = {
     site: '@maadan_dev',
     creator: '@maadan_dev',
     title: 'Abdulyekeen Maadan | Software Developer',
-    description: 'Software developer based in Lagos. I build production software for real clients using React, TypeScript, and Go. Open for freelance and part-time remote work.',
+    description: 'Software developer based in Lagos. I build production software for real clients using Next.js, React, TypeScript, and Go. Open for freelance and part-time remote work.',
     images: ['/og/og-image.jpg?v=2'],
   },
 };
@@ -121,6 +122,7 @@ export default function RootLayout({
                     "name": "Federal University of Agriculture, Abeokuta"
                   },
                   "knowsAbout": [
+                    "Next.js",
                     "React",
                     "TypeScript",
                     "JavaScript",

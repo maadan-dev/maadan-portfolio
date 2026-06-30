@@ -9,10 +9,10 @@ const experienceData = [
     role: "Contract Frontend Developer",
     company: "Self-Employed",
     duration: "May 2023 – Dec 2025",
-    tags: ["react", "typescript", "javascript", "framer-motion", "tailwind-css", "figma", "chrome-devtools", "rest-apis"],
+    tags: ["nextjs", "react", "typescript", "javascript", "framer-motion", "tailwind-css", "figma", "chrome-devtools", "rest-apis"],
     category: "frontend",
     bullets: [
-      "Delivered production React/TypeScript interfaces for paying clients across travel, non-profit, and executive persona verticals — including ATEKER Luxury Safaris (Canada) and a diplomatic executive's digital platform (segunalabi.me).",
+      "Delivered production Next.js and React/TypeScript interfaces for paying clients across travel, non-profit, and executive persona verticals — including ATEKER Luxury Safaris (Canada) and a diplomatic executive's digital platform (segunalabi.me).",
       "Built interactive UI components with Framer Motion; enforced strict TypeScript typing across API boundaries; developed dev-mode fallbacks to maintain build velocity.",
       "Managed full project cycles independently — scoping, building, testing, and deploying without institutional support."
     ]
@@ -113,6 +113,7 @@ export function ResumeClient() {
   const getTagKey = (techName: string) => {
     if (!techName) return '';
     const name = techName.toLowerCase().trim();
+    if (name.includes('next.js') || name.includes('nextjs')) return 'nextjs';
     if (name.includes('typescript')) return 'typescript';
     if (name.includes('javascript') || name.includes('es6+')) return 'javascript';
     if (name === 'go' || name.includes('go (net') || name.includes('go,')) return 'go';
@@ -193,28 +194,28 @@ export function ResumeClient() {
         case 'summary':
           setTerminalOutput(prev => [...prev, {
             type: 'success',
-            text: 'Abdulyekeen Maadan · Software Developer\nLagos-based developer with a Mathematics background and 2+ years delivering production client applications across the full frontend stack (React, TypeScript, Go).\nIncoming Fellow at the Learn2Earn AI Fellowship (Cohort 2), selected from ~4,000 applicants.'
+            text: 'Abdulyekeen Maadan · Software Developer\nLagos-based developer with a Mathematics background and 2+ years delivering production client applications across the full stack (Next.js, React, TypeScript, Go).\nIncoming Fellow at the Learn2Earn AI Fellowship (Cohort 2), selected from ~4,000 applicants.'
           }]);
           break;
 
         case 'projects':
           setTerminalOutput(prev => [...prev, {
             type: 'success',
-            text: 'NextRole NG — Full-Stack AI CV Optimisation Tool (nextroleng.tech)\n• Built a two-phase Gemini AI pipeline for tailored CV fact extractions and categories re-writing.\n• Designed SSE streaming pipelines for real-time extraction (~15s) with multimodal PDF extraction.\n• Stack: Go, React, TypeScript, Tailwind, Gemini API, Supabase, Railway, Vercel.'
+            text: 'NextRole NG — Full-Stack AI CV Optimisation Tool (nextroleng.tech)\n• Built a two-phase Gemini AI pipeline for tailored CV fact extractions and categories re-writing.\n• Designed SSE streaming pipelines for real-time extraction (~15s) with multimodal PDF extraction.\n• Stack: Go, Next.js, React, TypeScript, Tailwind, Gemini API, Supabase, Railway, Vercel.'
           }]);
           break;
 
         case 'experience':
           setTerminalOutput(prev => [...prev, {
             type: 'success',
-            text: 'Contract Frontend Developer — Self-Employed (May 2023 - Dec 2025)\n• Shipped high-performance React/TypeScript applications vertically for paying international clients (ATEKER Luxury Safaris, segunalabi.me).\n• Implemented interactive visual transitions using Framer Motion and typed API boundaries.'
+            text: 'Contract Frontend Developer — Self-Employed (May 2023 - Dec 2025)\n• Shipped high-performance Next.js and React/TypeScript applications vertically for paying international clients (ATEKER Luxury Safaris, segunalabi.me).\n• Implemented interactive visual transitions using Framer Motion and typed API boundaries.'
           }]);
           break;
 
         case 'skills':
           setTerminalOutput(prev => [...prev, {
             type: 'info',
-            text: 'Languages: TypeScript, JavaScript, Go, HTML5, CSS3\nFrameworks: React, Vite, Tailwind CSS, Framer Motion\nBackend & DB: Go (net/http), Supabase (PostgreSQL), REST, SSE Streaming\nAI & Workflows: Gemini API, Prompt Engineering, Git, Vercel, Railway'
+            text: 'Languages: TypeScript, JavaScript, Go, HTML5, CSS3\nFrameworks: Next.js, React, Vite, Tailwind CSS, Framer Motion\nBackend & DB: Go (net/http), Supabase (PostgreSQL), REST, SSE Streaming\nAI & Workflows: Gemini API, Prompt Engineering, Git, Vercel, Railway'
           }]);
           break;
 
@@ -277,7 +278,7 @@ export function ResumeClient() {
       return {
         ...proj,
         category: 'ai go frontend',
-        tags: ['go', 'react', 'typescript', 'tailwind-css', 'gemini-api', 'supabase', 'railway', 'vercel', 'sse-streaming'],
+        tags: ['go', 'nextjs', 'react', 'typescript', 'tailwind-css', 'gemini-api', 'supabase', 'railway', 'vercel', 'sse-streaming'],
         bullets: [
           "Built a two-phase Gemini AI pipeline: Phase 1 extracts verified CV facts, Phase 2 generates tailored rewrites per Nigerian job category — reducing hallucination and improving output reliability.",
           "Implemented SSE streaming for real-time results (~15 seconds), with multimodal PDF extraction handling Canva-formatted CVs.",
@@ -357,7 +358,7 @@ export function ResumeClient() {
               <span className="bg-gradient-to-r from-text-primary to-text-secondary bg-clip-text text-transparent">Maadan</span>
             </h1>
             <p className="text-xs text-text-secondary leading-relaxed font-light">
-              React &middot; TypeScript &middot; Go &middot; AI-Augmented Development
+              Next.js &middot; React &middot; TypeScript &middot; Go &middot; AI-Augmented Development
             </p>
           </div>
 
@@ -501,7 +502,8 @@ export function ResumeClient() {
             </h2>
             <p className="text-[15px] text-text-secondary leading-relaxed font-light">
               Software developer with a Mathematics background and 2+ years delivering production applications for real clients. 
-              Ships across the full frontend stack &mdash; <strong onClick={(e) => handleTagClick(e, 'react')} className={`font-semibold cursor-pointer border-b border-dashed border-white/20 hover:text-accent hover:border-accent transition-colors ${activeTagKey === 'react' ? 'bg-accent/10 text-accent border-accent/40 px-1 rounded' : ''}`}>React</strong>,{' '}
+              Ships across the full stack &mdash; <strong onClick={(e) => handleTagClick(e, 'nextjs')} className={`font-semibold cursor-pointer border-b border-dashed border-white/20 hover:text-accent hover:border-accent transition-colors ${activeTagKey === 'nextjs' ? 'bg-accent/10 text-accent border-accent/40 px-1 rounded' : ''}`}>Next.js</strong>,{' '}
+              <strong onClick={(e) => handleTagClick(e, 'react')} className={`font-semibold cursor-pointer border-b border-dashed border-white/20 hover:text-accent hover:border-accent transition-colors ${activeTagKey === 'react' ? 'bg-accent/10 text-accent border-accent/40 px-1 rounded' : ''}`}>React</strong>,{' '}
               <strong onClick={(e) => handleTagClick(e, 'typescript')} className={`font-semibold cursor-pointer border-b border-dashed border-white/20 hover:text-accent hover:border-accent transition-colors ${activeTagKey === 'typescript' ? 'bg-accent/10 text-accent border-accent/40 px-1 rounded' : ''}`}>TypeScript</strong>,{' '}
               <strong onClick={(e) => handleTagClick(e, 'go')} className={`font-semibold cursor-pointer border-b border-dashed border-white/20 hover:text-accent hover:border-accent transition-colors ${activeTagKey === 'go' ? 'bg-accent/10 text-accent border-accent/40 px-1 rounded' : ''}`}>Go</strong> &mdash; and builds AI-augmented products using{' '}
               <strong onClick={(e) => handleTagClick(e, 'gemini-api')} className={`font-semibold cursor-pointer border-b border-dashed border-white/20 hover:text-accent hover:border-accent transition-colors ${activeTagKey === 'gemini-api' ? 'bg-accent/10 text-accent border-accent/40 px-1 rounded' : ''}`}>Gemini</strong> and{' '}
