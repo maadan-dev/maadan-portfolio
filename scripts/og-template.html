@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Inter:wght@400;500&family=Geist+Mono:wght@400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@300;400;550&family=Geist+Mono:wght@400&display=swap');
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
@@ -11,56 +11,73 @@
       width: 1200px;
       height: 630px;
       overflow: hidden;
-      background: #050505;
+      background: #030303;
       font-family: 'Inter', sans-serif;
+      padding: 30px;
     }
 
-    .card {
-      width: 1200px;
-      height: 630px;
+    .frame {
+      width: 1140px;
+      height: 570px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 28px;
+      background: #050506;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 80px;
-      background: linear-gradient(135deg, #050505 0%, #0a1628 50%, #050505 100%);
+      padding: 0 70px;
       position: relative;
       overflow: hidden;
+      box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Modern Mesh Glow Background */
+    .glow-cyan {
+      position: absolute;
+      bottom: -150px;
+      left: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .glow-indigo {
+      position: absolute;
+      top: -150px;
+      right: -50px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
     }
 
     /* Subtle grid pattern */
-    .card::before {
+    .frame::before {
       content: '';
       position: absolute;
       inset: 0;
       background-image: 
-        linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
-      background-size: 60px 60px;
+        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+      background-size: 50px 50px;
+      z-index: 0;
     }
 
-    /* Accent glow */
-    .card::after {
-      content: '';
-      position: absolute;
-      top: -100px;
-      right: 100px;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    /* Logo styling */
+    /* Top Left Label */
     .logo-container {
       position: absolute;
       top: 48px;
-      left: 80px;
+      left: 70px;
       z-index: 2;
     }
 
     .logo {
-      height: 32px;
+      height: 24px;
       width: auto;
+      opacity: 0.85;
     }
 
     .left {
@@ -68,59 +85,62 @@
       flex-direction: column;
       gap: 16px;
       z-index: 1;
-      max-width: 650px;
-      margin-top: 40px;
+      max-width: 600px;
+      margin-top: 30px;
     }
 
     .label {
-      font-family: 'Geist Mono', 'Courier New', monospace;
-      font-size: 13px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 4px;
-      color: #3b82f6;
+      letter-spacing: 5px;
+      color: #60a5fa;
       display: flex;
       align-items: center;
       gap: 12px;
+      font-weight: 500;
     }
 
     .label::before {
       content: '';
-      width: 32px;
+      width: 24px;
       height: 1px;
-      background: #3b82f6;
+      background: #60a5fa;
+      opacity: 0.7;
     }
 
     .name {
       font-family: 'Outfit', sans-serif;
-      font-size: 72px;
-      font-weight: 700;
-      color: #fafafa;
-      line-height: 1.05;
-      letter-spacing: -2px;
+      font-size: 78px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 0.95;
+      letter-spacing: -3px;
     }
 
     .role {
-      font-family: 'Outfit', sans-serif;
-      font-size: 28px;
-      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 300;
       color: #a1a1aa;
-      letter-spacing: -0.5px;
+      line-height: 1.4;
+      margin-bottom: 8px;
     }
 
     .stack {
       display: flex;
-      gap: 8px;
+      gap: 10px;
       margin-top: 8px;
     }
 
     .stack span {
-      font-family: 'Geist Mono', 'Courier New', monospace;
-      font-size: 12px;
-      padding: 5px 12px;
-      border: 1px solid #27272a;
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      padding: 6px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: 100px;
-      color: #a1a1aa;
-      background: rgba(17, 17, 17, 0.8);
+      color: rgba(250, 250, 250, 0.6);
+      background: rgba(255, 255, 255, 0.02);
     }
 
     .right {
@@ -133,71 +153,78 @@
 
     .photo-container {
       position: relative;
-      width: 320px;
-      height: 320px;
+      width: 280px;
+      height: 280px;
     }
 
     .photo-ring {
       position: absolute;
-      inset: -15px;
+      inset: -12px;
       border-radius: 50%;
-      border: 2px solid rgba(59, 130, 246, 0.2);
+      border: 2px solid rgba(96, 165, 250, 0.15);
     }
 
     .photo-ring-inner {
       position: absolute;
-      inset: 5px;
+      inset: 4px;
       border-radius: 50%;
-      border: 1px solid rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(96, 165, 250, 0.06);
     }
 
     .photo {
-      width: 320px;
-      height: 320px;
+      width: 280px;
+      height: 280px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center top;
-      filter: grayscale(30%);
+      filter: grayscale(10%) contrast(105%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .dot {
       position: absolute;
-      width: 8px;
-      height: 8px;
-      background: #3b82f6;
+      width: 10px;
+      height: 10px;
+      background: #60a5fa;
       border-radius: 50%;
-      top: 20px;
-      right: 30px;
+      top: 15px;
+      right: 25px;
+      box-shadow: 0 0 12px #60a5fa;
     }
 
     /* Bottom URL */
     .url {
       position: absolute;
-      bottom: 32px;
-      left: 80px;
-      font-family: 'Geist Mono', 'Courier New', monospace;
-      font-size: 12px;
-      color: #52525b;
-      letter-spacing: 1px;
+      bottom: 40px;
+      left: 70px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      color: rgba(250, 250, 250, 0.25);
+      letter-spacing: 2px;
     }
   </style>
 </head>
 <body>
-  <div class="card">
+  <div class="frame">
+    <div class="glow-cyan"></div>
+    <div class="glow-indigo"></div>
+    
     <div class="logo-container">
       <img class="logo" src="file:///C:/Users/user/Documents/GitHub/My%20Portfolio/maadan-portfolio/public/logo_horizontal.png" alt="Logo">
     </div>
+    
     <div class="left">
       <div class="label">Software Developer</div>
       <div class="name">Abdulyekeen<br>Maadan</div>
       <div class="role">Building real products for real clients.</div>
       <div class="stack">
+        <span>Next.js</span>
         <span>React</span>
         <span>TypeScript</span>
         <span>Go</span>
-        <span>AI-Augmented</span>
       </div>
     </div>
+    
     <div class="right">
       <div class="photo-container">
         <div class="photo-ring"></div>
@@ -206,6 +233,7 @@
         <div class="dot"></div>
       </div>
     </div>
+    
     <div class="url">maadan.dev</div>
   </div>
 </body>

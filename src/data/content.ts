@@ -60,6 +60,22 @@ export const projects: Project[] = [
     ]
   },
   {
+    title: "Document Automation (Maadan Tools)",
+    role: "Sole Developer (Contract)",
+    problem: "A Lagos agribusiness needed to stop generating land contracts in Microsoft Word — eliminating typing errors, manual ROI calculations, and the security risk of sending client data to a backend server.",
+    execution: "Engineered a zero-backend, fully client-side generator using Next.js and @react-pdf/renderer. Resolved complex PDF ligature rendering bugs (GSUB font table stripping) and built a dynamic calculations engine for document clauses.",
+    result: "Generates print-ready Deeds of Assignment and Farm Management Agreements in under 2 seconds. Runs entirely in the client's browser, preserving 100% data privacy.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    image: "/images/davidorlah_logo.png",
+    link: "/blog/client-side-pdf-generator",
+    featured: true,
+    highlights: [
+      "100% client-side compilation ensuring zero sensitive data leaves the device",
+      "Dynamic legal clause mapping based on payment schedules and plot calculations",
+      "Robust custom font injection mapping the Naira symbol (₦) correctly in PDF"
+    ]
+  },
+  {
     title: "Executive Persona — segunalabi.me",
     role: "Frontend Developer (Repeat Client)",
     problem: "Build an authoritative digital presence for a diplomatic executive and MD of Davidorlah Nigeria Limited.",
