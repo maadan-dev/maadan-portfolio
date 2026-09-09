@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical: '/writing',
   },
   openGraph: {
-    title: 'Writing | Yaqeen Maadan',
+    title: 'Writing | Yekeen Maadan',
     description: 'Thoughts on systems, engineering, and personal growth. Essays on software development, AI, and building real products.',
     url: 'https://www.maadan.dev/writing',
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Writing | Yaqeen Maadan',
+    title: 'Writing | Yekeen Maadan',
     description: 'Thoughts on systems, engineering, and personal growth.',
     images: ['/og/og-image.jpg?v=2'],
     site: '@maadan_dev',
@@ -40,13 +40,13 @@ export default function WritingRoute() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            "name": "Writing — Yaqeen Maadan",
+            "name": "Writing — Yekeen Maadan",
             "description": "Thoughts on systems, engineering, and personal growth.",
             "url": "https://www.maadan.dev/writing",
             "author": {
               "@type": "Person",
               "@id": "https://www.maadan.dev/#person",
-              "name": "Yaqeen Maadan"
+              "name": "Yekeen Maadan"
             },
             "mainEntity": {
               "@type": "ItemList",
@@ -63,7 +63,7 @@ export default function WritingRoute() {
                   "author": {
                     "@type": "Person",
                     "@id": "https://www.maadan.dev/#person",
-                    "name": "Yaqeen Maadan"
+                    "name": "Yekeen Maadan"
                   }
                 }
               }))

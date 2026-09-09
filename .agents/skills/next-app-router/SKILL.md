@@ -49,13 +49,13 @@ Never put markup or logic directly in the route file. Keep it a thin wrapper.
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Page Title · Abdulyekeen Maadan',
+  title: 'Page Title · Yekeen Maadan',
   description: 'Page description.',
   alternates: {
     canonical: 'https://www.maadan.dev/page-slug',
   },
   openGraph: {
-    title: 'Page Title · Abdulyekeen Maadan',
+    title: 'Page Title · Yekeen Maadan',
     description: 'Page description.',
     type: 'website',
     url: 'https://www.maadan.dev/page-slug',
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Page Title · Abdulyekeen Maadan',
+    title: 'Page Title · Yekeen Maadan',
     description: 'Page description.',
     images: ['/og/og-image.jpg?v=2'],
     site: '@maadan_dev',

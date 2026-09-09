@@ -31,10 +31,10 @@ export async function generateMetadata({ params }: RouteParams): Promise<Metadat
     openGraph: {
       type: 'article',
       url,
-      title: `${post.title} | Yaqeen Maadan`,
+      title: `${post.title} | Yekeen Maadan`,
       description: post.subtitle,
       publishedTime: new Date(post.date).toISOString(),
-      authors: ['Yaqeen Maadan'],
+      authors: ['Yekeen Maadan'],
       section: post.category,
       images: [
         {
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: RouteParams): Promise<Metadat
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${post.title} | Yaqeen Maadan`,
+      title: `${post.title} | Yekeen Maadan`,
       description: post.subtitle,
       images: [post.ogImage || '/og/og-image.jpg'],
       site: '@maadan_dev',
@@ -81,13 +81,13 @@ export default async function BlogPostRoute({ params }: RouteParams) {
             "author": {
               "@type": "Person",
               "@id": "https://www.maadan.dev/#person",
-              "name": "Yaqeen Maadan",
+              "name": "Yekeen Maadan",
               "url": "https://www.maadan.dev"
             },
             "publisher": {
               "@type": "Person",
               "@id": "https://www.maadan.dev/#person",
-              "name": "Yaqeen Maadan"
+              "name": "Yekeen Maadan"
             },
             "image": post.ogImage || "/og/og-image.jpg",
             "mainEntityOfPage": {

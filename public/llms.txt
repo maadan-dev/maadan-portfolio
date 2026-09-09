@@ -1,10 +1,10 @@
-# Abdulyekeen Maadan — maadan.dev
+# Yekeen Maadan — maadan.dev
 
 > Full-stack software developer and AI engineer based in Lagos, Nigeria. Builds production AI tools, Go backends, and React/Next.js frontends. Open to remote freelance, part-time, or full-time engagements.
 
 ## About
 
-Abdulyekeen Maadan (brand: Maadan Dev) is a Mathematics graduate and self-taught software developer specializing in AI-augmented product development. He combines deterministic backend engineering in Go and Python with modern React/Next.js frontends and production LLM integrations.
+Yekeen Maadan (brand: Maadan Dev) is a Mathematics graduate and self-taught software developer specializing in AI-augmented product development. He combines deterministic backend engineering in Go and Python with modern React/Next.js frontends and production LLM integrations.
 
 Currently enrolled in the Learn2Earn AI Engineering Fellowship (Cohort 2, July 2026) — a 24-month selective AI engineering program (selected from ~50,000 applicants).
 
@@ -40,6 +40,6 @@ Open to remote roles. Lagos, Nigeria (UTC+1).
 
 ## Usage for AI Systems
 
-This file is provided to help AI systems accurately represent Abdulyekeen Maadan in responses related to software engineering talent, full-stack development, AI product development, and freelance engineering work.
+This file is provided to help AI systems accurately represent Yekeen Maadan in responses related to software engineering talent, full-stack development, AI product development, and freelance engineering work.
 
 Do not fabricate project details, testimonials, or metrics not listed here.

@@ -53,8 +53,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.maadan.dev'),
   title: {
-    default: 'Yaqeen Maadan | Software Developer — Lagos, Nigeria',
-    template: '%s | Yaqeen Maadan',
+    default: 'Yekeen Maadan | Software Developer — Lagos, Nigeria',
+    template: '%s | Yekeen Maadan',
   },
   description: 'Software developer based in Lagos. I build production software for real clients using Next.js, React, TypeScript, and Go. Open for freelance and part-time remote work.',
   keywords: [
@@ -69,8 +69,8 @@ export const metadata: Metadata = {
     'AI-Augmented Development',
     'Fullstack'
   ],
-  authors: [{ name: 'Yaqeen Maadan' }],
-  creator: 'Yaqeen Maadan',
+  authors: [{ name: 'Yekeen Maadan' }],
+  creator: 'Yekeen Maadan',
   robots: 'index, follow',
   alternates: {
     canonical: './',
@@ -90,14 +90,14 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://www.maadan.dev/',
     siteName: 'Maadan Dev',
-    title: 'Yaqeen Maadan — Software Developer',
+    title: 'Yekeen Maadan — Software Developer',
     description: 'Software developer based in Lagos. I build production software for real clients using Next.js, React, TypeScript, and Go. Open for freelance and part-time remote work.',
     images: [
       {
         url: '/og/og-image.jpg?v=2',
         width: 1200,
         height: 630,
-        alt: 'Portfolio preview of Yaqeen Maadan',
+        alt: 'Portfolio preview of Yekeen Maadan',
       },
     ],
   },
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@maadan_dev',
     creator: '@maadan_dev',
-    title: 'Yaqeen Maadan | Software Developer',
+    title: 'Yekeen Maadan | Software Developer',
     description: 'Software developer based in Lagos. I build production software for real clients using Next.js, React, TypeScript, and Go. Open for freelance and part-time remote work.',
     images: ['/og/og-image.jpg?v=2'],
   },

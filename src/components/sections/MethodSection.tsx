@@ -38,7 +38,7 @@ export function MethodSection() {
 
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: '-40px' }} transition={{ duration: 0.8, ease: E as any }} className="relative overflow-hidden rounded-lg" style={{ border: '1px solid rgba(255,255,255,0.04)' }}>
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent z-10" />
-              <Image src="/images/profile.webp" alt="Yaqeen Maadan" width={600} height={800} className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700" style={{ maxHeight: 340, objectPosition: 'center top' }} />
+              <Image src="/images/profile.webp" alt="Yekeen Maadan" width={600} height={800} className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700" style={{ maxHeight: 340, objectPosition: 'center top' }} />
             </motion.div>
 
             <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }} style={{ fontFamily: "'Barlow',sans-serif", fontWeight: 300, fontSize: 11, letterSpacing: '0.12em', color: 'rgba(250,250,250,0.5)' }}>
@@ -78,7 +78,7 @@ export function MethodSection() {
             {/* Mobile profile */}
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="relative overflow-hidden rounded-lg lg:hidden" style={{ border: '1px solid rgba(255,255,255,0.04)' }}>
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent z-10" />
-              <Image src="/images/profile.webp" alt="Yaqeen Maadan" width={400} height={500} className="w-full h-auto object-cover grayscale" style={{ maxHeight: 280, objectPosition: 'center top' }} />
+              <Image src="/images/profile.webp" alt="Yekeen Maadan" width={400} height={500} className="w-full h-auto object-cover grayscale" style={{ maxHeight: 280, objectPosition: 'center top' }} />
             </motion.div>
 
             {/* Skills */}

@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
 
-export const alt = 'Yaqeen Maadan - Software Developer';
+export const alt = 'Yekeen Maadan - Software Developer';
 export const size = {
   width: 1200,
   height: 630,
@@ -50,7 +50,7 @@ export default async function Image() {
               color: 'transparent',
             }}
           >
-            Yaqeen Maadan
+            Yekeen Maadan
           </h1>
           <p
             style={{

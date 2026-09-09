@@ -66,7 +66,7 @@ export function BlogPost({ slug: propSlug }: { slug?: string }) {
           </p>
           <div className="flex items-center gap-4 mt-8 pt-8 border-t border-border/50">
             <div>
-              <p className="text-sm text-text-primary font-medium">Yaqeen Maadan</p>
+              <p className="text-sm text-text-primary font-medium">Yekeen Maadan</p>
               <p className="text-xs text-text-secondary font-mono">
                 {post.date} {post.lastUpdated && `· Updated ${post.lastUpdated}`} · {post.readTime}
               </p>

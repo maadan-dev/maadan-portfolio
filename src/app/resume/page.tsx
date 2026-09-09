@@ -3,13 +3,13 @@ import { ResumeClient } from './ResumeClient';
 import { personalInfo, projects, skillCategories, education, fellowship } from '../../data/content';
 
 export const metadata: Metadata = {
-  title: 'Yaqeen Maadan · Frontend & Go Developer — Resume',
+  title: 'Yekeen Maadan · Frontend & Go Developer — Resume',
   description: 'Mathematics graduate turned software developer. Fellow at the Learn2Earn AI Engineering Fellowship. Ships Next.js, React, TypeScript, and Go applications.',
   alternates: {
     canonical: 'https://www.maadan.dev/resume',
   },
   openGraph: {
-    title: 'Yaqeen Maadan · Frontend & Go Developer — Resume',
+    title: 'Yekeen Maadan · Frontend & Go Developer — Resume',
     description: 'Mathematics graduate turned software developer. Fellow at the Learn2Earn AI Engineering Fellowship. Ships Next.js, React, TypeScript, and Go applications.',
     type: 'website',
     url: 'https://www.maadan.dev/resume',
@@ -19,13 +19,13 @@ export const metadata: Metadata = {
         url: '/og/og-image.jpg?v=2',
         width: 1200,
         height: 630,
-        alt: 'Resume preview of Yaqeen Maadan',
+        alt: 'Resume preview of Yekeen Maadan',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Yaqeen Maadan · Frontend & Go Developer — Resume',
+    title: 'Yekeen Maadan · Frontend & Go Developer — Resume',
     description: 'Mathematics graduate turned software developer. Fellow at the Learn2Earn AI Engineering Fellowship. Ships Next.js, React, TypeScript, and Go applications.',
     images: ['/og/og-image.jpg?v=2'],
     site: '@maadan_dev',
@@ -45,7 +45,7 @@ export default function ResumePage() {
               {
                 "@type": "Person",
                 "@id": "https://www.maadan.dev/#person",
-                "name": "Yaqeen Maadan",
+                "name": "Yekeen Maadan",
                 "jobTitle": "Software Developer",
                 "url": "https://www.maadan.dev/resume",
                 "email": personalInfo.email,
@@ -93,7 +93,7 @@ export default function ResumePage() {
       />
       {/* Server-rendered content for crawlers — full resume data */}
       <div className="sr-only">
-        <h1>Yaqeen Maadan — Software Developer Resume</h1>
+        <h1>Yekeen Maadan — Software Developer Resume</h1>
         <p>
           Software developer with a Mathematics background and 2+ years
           delivering production applications for real clients. Ships across the

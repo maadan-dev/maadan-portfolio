@@ -1,6 +1,6 @@
 # Maadan Portfolio
 
-Personal portfolio site for Abdulyekeen Maadan ([maadan.dev](https://maadan.dev)).
+Personal portfolio site for Yekeen Maadan ([maadan.dev](https://maadan.dev)).
 
 ## Live
 

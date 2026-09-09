@@ -1,7 +1,7 @@
 import type { Project, Metric, SkillCategory } from '../types';
 
 export const personalInfo = {
-  name: "YAQEEN MAADAN",
+  name: "YEKEEN MAADAN",
   role: "Software Developer",
   headline: "I don't build demos. I ship products.",
   subHeadline: "Mathematics graduate turned software developer. Fellow at the Learn2Earn AI Engineering Fellowship (selected from ~50,000 applicants) — building production-grade web applications and systems.",
@@ -35,7 +35,7 @@ export const fellowship = {
 
 export const testimonials = [
   {
-    quote: "I'm thrilled to share my positive experience working with Yaqeen on the website for the Jaytee Fayemi Foundation. The website is visually appealing, well-organized, and perfectly reflects our mission and values. The design and functionality are top-notch, making it easy for our visitors to engage with our content. He was attentive to our needs and delivered a product that exceeds our expectations. For anyone looking for a skilled professional in web design, I highly recommend Yaqeen.",
+    quote: "I'm thrilled to share my positive experience working with Yekeen on the website for the Jaytee Fayemi Foundation. The website is visually appealing, well-organized, and perfectly reflects our mission and values. The design and functionality are top-notch, making it easy for our visitors to engage with our content. He was attentive to our needs and delivered a product that exceeds our expectations. For anyone looking for a skilled professional in web design, I highly recommend Yekeen.",
     author: "Janet Fayemi",
     role: "Operations Coordinator & Nonprofit Program Leader"
   }
