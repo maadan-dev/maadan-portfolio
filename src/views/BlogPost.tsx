@@ -9,6 +9,7 @@ import { posts } from '../data/blog';
 import { HallucinationPost } from '../components/blog/posts/HallucinationPost';
 import { MotivationPost } from '../components/blog/posts/MotivationPost';
 import { DavidorlahPost } from '../components/blog/posts/DavidorlahPost';
+import { BugWasntWherePost } from '../components/blog/posts/BugWasntWherePost';
 import { TableOfContents } from '../components/blog/TableOfContents';
 import { PostInteractions } from '../components/blog/PostInteractions';
 
@@ -16,6 +17,7 @@ const postContent: Record<string, React.ComponentType> = {
   'hallucination-architecture': HallucinationPost,
   'motivation-is-a-bug': MotivationPost,
   'client-side-pdf-generator': DavidorlahPost,
+  'the-bug-wasnt-where-i-was-looking': BugWasntWherePost,
 };
 
 export function BlogPost({ slug: propSlug }: { slug?: string }) {

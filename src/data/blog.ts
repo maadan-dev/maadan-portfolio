@@ -11,6 +11,15 @@ export interface PostMeta {
 
 export const posts: PostMeta[] = [
   {
+    slug: "the-bug-wasnt-where-i-was-looking",
+    title: "The Bug Wasn't Where I Was Looking",
+    subtitle: "Math isn't just the collection of theorems you remember. It's a mental operating system.",
+    date: "September 21, 2026",
+    readTime: "4 min read",
+    category: "Engineering Deep Dive",
+    ogImage: "/og/blog/the-bug-wasnt-where-i-was-looking.jpg"
+  },
+  {
     slug: "client-side-pdf-generator",
     title: "How I Built a Client-Side Legal Document Generator",
     subtitle: "A Lagos agribusiness needed land contracts automated. Here's how I did it entirely in the browser — no backend, no server costs.",
