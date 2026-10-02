@@ -13,7 +13,7 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const isBlogPage = pathname.startsWith('/blog') || pathname === '/writing';
+  const isBlogPage = pathname.startsWith('/blog') || pathname === '/writing' || pathname === '/fellowship';
   const isHomePage = pathname === '/';
 
   useEffect(() => {
@@ -83,6 +83,7 @@ export function Navigation() {
               <a href="#case-studies" data-hover style={navLinkStyle}>Work</a>
               <a href="#method" data-hover style={navLinkStyle}>About</a>
               <Link href="/writing" data-hover style={navLinkStyle}>Writing</Link>
+              <Link href="/fellowship" data-hover style={navLinkStyle}>Fellowship</Link>
               <a href="#contact" data-hover style={navLinkStyle}>Contact</a>
             </>
           )}
@@ -142,6 +143,7 @@ export function Navigation() {
             <a href="#case-studies" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Work</a>
             <a href="#method" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>About</a>
             <Link href="/writing" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Writing</Link>
+            <Link href="/fellowship" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Fellowship</Link>
             <a href="#contact" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Contact</a>
           </>
         )}
