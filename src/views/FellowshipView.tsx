@@ -15,9 +15,9 @@ export function FellowshipView() {
 
   return (
     <main className="min-h-screen pt-24 sm:pt-28 pb-20 bg-background">
-      {/* ── 1/3 VH Split Hero: Requested Typography on Left, Fading Photo on Right ── */}
-      <section className="relative w-full border-b border-border/50 overflow-hidden min-h-[38vh] flex items-center mb-12 sm:mb-16">
-        {/* Right-anchored fading photo backdrop (head intact, bottom cropped) */}
+      {/* ── 1/3 VH Split Hero: Bottom-Left Anchored Text & Fading Photo Backdrop ── */}
+      <section className="relative w-full border-b border-border/50 overflow-hidden min-h-[48vh] sm:min-h-[42vh] flex items-end mb-12 sm:mb-16">
+        {/* Right-anchored fading photo backdrop (object-[center_14%] on mobile keeps head high above bottom text) */}
         <div className="absolute top-0 right-0 w-full md:w-[50%] lg:w-[46%] h-full z-0 overflow-hidden pointer-events-none">
           <Image
             src="/images/fellowship-working.webp"
@@ -25,7 +25,7 @@ export function FellowshipView() {
             fill
             priority
             sizes="(max-width: 768px) 100vw, 750px"
-            className="object-cover object-[center_25%] opacity-35 sm:opacity-40 filter contrast-[112%]"
+            className="object-cover object-[center_14%] sm:object-[center_25%] opacity-40 sm:opacity-40 filter contrast-[112%]"
           />
 
           {/* Seamless multi-directional fade into the #050505 page background */}
@@ -43,9 +43,10 @@ export function FellowshipView() {
                 ),
                 linear-gradient(
                   to bottom,
-                  rgba(5, 5, 5, 0.8) 0%,
+                  rgba(5, 5, 5, 0.5) 0%,
                   transparent 20%,
-                  transparent 75%,
+                  rgba(5, 5, 5, 0.8) 55%,
+                  #050505 85%,
                   #050505 100%
                 )
               `,
@@ -53,11 +54,11 @@ export function FellowshipView() {
           />
         </div>
 
-        {/* Hero Content Container */}
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-12 sm:py-16 relative z-10 w-full">
-          <div className="max-w-2xl">
+        {/* Hero Content Container — Anchored to Lower Bottom-Left */}
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-28 sm:pt-36 pb-6 sm:pb-10 relative z-10 w-full flex flex-col justify-end">
+          <div className="max-w-xl">
             {/* Kicker */}
-            <div className="flex items-center gap-3 mb-4 flex-wrap">
+            <div className="flex items-center gap-3 mb-2.5 sm:mb-3 flex-wrap">
               <span className="font-mono text-xs uppercase tracking-widest text-accent flex items-center gap-2">
                 <span>&gt;_</span> 03 // SYSTEMS &amp; AI FELLOWSHIP
               </span>
@@ -69,36 +70,32 @@ export function FellowshipView() {
             </div>
 
             {/* Title: Bebas Neue with Accent Series */}
-            <h1 className="font-bebas text-5xl sm:text-7xl lg:text-8xl tracking-tight text-text-primary leading-[0.92] uppercase mb-5">
+            <h1 className="font-bebas text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-text-primary leading-[0.92] uppercase mb-3 sm:mb-4">
               FELLOWSHIP <span className="text-accent">SERIES.</span>
             </h1>
 
-            {/* Subtitle */}
-            <p className="font-sans text-base sm:text-lg text-text-secondary font-light max-w-xl leading-relaxed mb-8">
-              A Python project series, one repo, built during the Learn2Earn AI Engineering Fellowship.
-              Each project links to its README for the full writeup. One continuous monorepo
-              documenting the transition from core data structures and CLI utilities to autonomous LLM
-              agents, document generators, and desktop interfaces — emphasizing what broke, why it
-              broke, and the mental models gained.
+            {/* Short, Punchy Subtitle */}
+            <p className="font-sans text-xs sm:text-base text-text-secondary font-light max-w-lg leading-relaxed mb-5 sm:mb-6">
+              A documented Python series built during the Learn2Earn AI Engineering Fellowship — real bugs, system architecture, and what each build taught me.
             </p>
 
             {/* Metrics Bar & GitHub CTA */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-5 border-t border-border/50">
-              <div className="bg-surface/80 border border-border/80 px-3.5 py-1.5 rounded-lg flex items-center gap-2">
-                <span className="font-bebas text-lg text-accent leading-none">04</span>
-                <span className="font-mono text-[10px] text-text-secondary uppercase tracking-wider">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-3.5 sm:pt-4 border-t border-border/50">
+              <div className="bg-surface/80 border border-border/80 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg flex items-center gap-1.5 sm:gap-2">
+                <span className="font-bebas text-base sm:text-lg text-accent leading-none">04</span>
+                <span className="font-mono text-[9px] sm:text-[10px] text-text-secondary uppercase tracking-wider">
                   Shipped Builds
                 </span>
               </div>
-              <div className="bg-surface/80 border border-border/80 px-3.5 py-1.5 rounded-lg flex items-center gap-2">
-                <span className="font-bebas text-lg text-text-primary leading-none">01</span>
-                <span className="font-mono text-[10px] text-text-secondary uppercase tracking-wider">
+              <div className="bg-surface/80 border border-border/80 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg flex items-center gap-1.5 sm:gap-2">
+                <span className="font-bebas text-base sm:text-lg text-text-primary leading-none">01</span>
+                <span className="font-mono text-[9px] sm:text-[10px] text-text-secondary uppercase tracking-wider">
                   Monorepo
                 </span>
               </div>
-              <div className="bg-surface/80 border border-border/80 px-3.5 py-1.5 rounded-lg flex items-center gap-2">
-                <span className="font-bebas text-lg text-text-primary leading-none">100%</span>
-                <span className="font-mono text-[10px] text-text-secondary uppercase tracking-wider">
+              <div className="bg-surface/80 border border-border/80 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg flex items-center gap-1.5 sm:gap-2">
+                <span className="font-bebas text-base sm:text-lg text-text-primary leading-none">100%</span>
+                <span className="font-mono text-[9px] sm:text-[10px] text-text-secondary uppercase tracking-wider">
                   Post-Mortem Logged
                 </span>
               </div>
@@ -107,7 +104,7 @@ export function FellowshipView() {
                 href={REPO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-hover/80 hover:bg-accent/15 border border-border hover:border-accent/40 text-text-primary hover:text-accent font-mono text-xs uppercase tracking-widest transition-all duration-300 ml-0 sm:ml-auto"
+                className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-4 sm:py-2 rounded-full bg-surface-hover/80 hover:bg-accent/15 border border-border hover:border-accent/40 text-text-primary hover:text-accent font-mono text-[10px] sm:text-xs uppercase tracking-widest transition-all duration-300 ml-0 sm:ml-auto"
               >
                 <span>&lt;/&gt;</span>
                 <span>maadan-dev / python-project-series</span>
