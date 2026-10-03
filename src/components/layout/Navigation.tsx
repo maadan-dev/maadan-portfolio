@@ -67,8 +67,6 @@ export function Navigation() {
             style={{ height: scrolled ? 22 : 26, width: 'auto', objectFit: 'contain', transition: 'height 0.3s ease' }}
           />
         </Link>
-
-
         {/* Desktop Links */}
         <nav className="hidden md:flex items-center gap-8">
           {isBlogPage ? (
@@ -76,6 +74,26 @@ export function Navigation() {
               <Link href="/" data-hover style={navLinkStyle}>Home</Link>
               <Link href="/#case-studies" data-hover style={navLinkStyle}>Work</Link>
               <Link href="/#method" data-hover style={navLinkStyle}>About</Link>
+              <Link
+                href="/writing"
+                data-hover
+                style={{
+                  ...navLinkStyle,
+                  color: pathname.startsWith('/blog') || pathname === '/writing' ? '#fafafa' : navLinkStyle.color,
+                }}
+              >
+                Writing
+              </Link>
+              <Link
+                href="/fellowship"
+                data-hover
+                style={{
+                  ...navLinkStyle,
+                  color: pathname === '/fellowship' ? '#60a5fa' : navLinkStyle.color,
+                }}
+              >
+                Fellowship
+              </Link>
               <Link href="/#contact" data-hover style={navLinkStyle}>Contact</Link>
             </>
           ) : (
@@ -136,6 +154,8 @@ export function Navigation() {
             <Link href="/" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Home</Link>
             <Link href="/#case-studies" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Work</Link>
             <Link href="/#method" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>About</Link>
+            <Link href="/writing" onClick={() => setIsOpen(false)} style={{ ...mobileLinkStyle, color: pathname.startsWith('/blog') || pathname === '/writing' ? '#60a5fa' : mobileLinkStyle.color }}>Writing</Link>
+            <Link href="/fellowship" onClick={() => setIsOpen(false)} style={{ ...mobileLinkStyle, color: pathname === '/fellowship' ? '#60a5fa' : mobileLinkStyle.color }}>Fellowship</Link>
             <Link href="/#contact" onClick={() => setIsOpen(false)} style={mobileLinkStyle}>Contact</Link>
           </>
         ) : (
