@@ -15,20 +15,20 @@ export function FellowshipView() {
 
   return (
     <main className="min-h-screen pt-24 sm:pt-28 pb-20 bg-background">
-      {/* ── 1/3 VH Split Hero: Bottom-Left Anchored Text & Fading Photo Backdrop ── */}
-      <section className="relative w-full border-b border-border/50 overflow-hidden min-h-[48vh] sm:min-h-[42vh] flex items-end mb-12 sm:mb-16">
-        {/* Right-anchored fading photo backdrop (object-[center_14%] on mobile keeps head high above bottom text) */}
-        <div className="absolute top-0 right-0 w-full md:w-[50%] lg:w-[46%] h-full z-0 overflow-hidden pointer-events-none">
+      {/* ── Split Hero: Tall Mobile Height, Bottom-Left Corner Text & Fading Photo ── */}
+      <section className="relative w-full border-b border-border/50 overflow-hidden min-h-[72vh] sm:min-h-[44vh] flex flex-col justify-end mb-12 sm:mb-16">
+        {/* Right-anchored fading photo backdrop: tall on mobile with head in upper half */}
+        <div className="absolute inset-0 sm:left-auto sm:right-0 sm:w-[50%] lg:w-[46%] h-full z-0 overflow-hidden pointer-events-none">
           <Image
             src="/images/fellowship-working.webp"
             alt="Yekeen Maadan working at the NVP Tech Room during the Learn2Earn AI Engineering Fellowship"
             fill
             priority
             sizes="(max-width: 768px) 100vw, 750px"
-            className="object-cover object-[center_14%] sm:object-[center_25%] opacity-40 sm:opacity-40 filter contrast-[112%]"
+            className="object-cover object-[center_12%] sm:object-[center_25%] opacity-55 sm:opacity-40 filter contrast-[112%]"
           />
 
-          {/* Seamless multi-directional fade into the #050505 page background */}
+          {/* Seamless multi-directional fade: top half clear photo, lower half fades into #050505 */}
           <div
             className="absolute inset-0"
             style={{
@@ -36,16 +36,17 @@ export function FellowshipView() {
                 linear-gradient(
                   to right,
                   #050505 0%,
-                  rgba(5, 5, 5, 0.98) 20%,
+                  rgba(5, 5, 5, 0.98) 22%,
                   rgba(5, 5, 5, 0.65) 55%,
                   rgba(5, 5, 5, 0.25) 85%,
                   rgba(5, 5, 5, 0.65) 100%
                 ),
                 linear-gradient(
                   to bottom,
-                  rgba(5, 5, 5, 0.5) 0%,
-                  transparent 20%,
-                  rgba(5, 5, 5, 0.8) 55%,
+                  rgba(5, 5, 5, 0.4) 0%,
+                  transparent 18%,
+                  rgba(5, 5, 5, 0.5) 45%,
+                  rgba(5, 5, 5, 0.95) 65%,
                   #050505 85%,
                   #050505 100%
                 )
@@ -54,49 +55,49 @@ export function FellowshipView() {
           />
         </div>
 
-        {/* Hero Content Container — Anchored to Lower Bottom-Left */}
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-28 sm:pt-36 pb-6 sm:pb-10 relative z-10 w-full flex flex-col justify-end">
-          <div className="max-w-xl">
+        {/* Hero Content Container — Tucked into Lower Bottom-Left Corner */}
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-24 sm:pt-36 pb-6 sm:pb-10 relative z-10 w-full flex flex-col justify-end">
+          <div className="w-full max-w-[310px] sm:max-w-xl self-start text-left">
             {/* Kicker */}
-            <div className="flex items-center gap-3 mb-2.5 sm:mb-3 flex-wrap">
-              <span className="font-mono text-xs uppercase tracking-widest text-accent flex items-center gap-2">
-                <span>&gt;_</span> 03 // SYSTEMS &amp; AI FELLOWSHIP
+            <div className="flex items-center gap-2.5 sm:gap-3 mb-2 sm:mb-3 flex-wrap">
+              <span className="font-mono text-[11px] sm:text-xs uppercase tracking-widest text-accent flex items-center gap-1.5">
+                <span>&gt;_</span> 03 // SYSTEMS &amp; AI
               </span>
-              <span className="h-px w-6 bg-border/80 hidden sm:inline-block" />
-              <span className="inline-flex items-center gap-1.5 font-mono text-[11px] text-text-secondary/70 uppercase tracking-wider">
+              <span className="h-px w-4 sm:w-6 bg-border/80 hidden sm:inline-block" />
+              <span className="inline-flex items-center gap-1.5 font-mono text-[10px] sm:text-[11px] text-text-secondary/70 uppercase tracking-wider">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                LEARN2EARN COHORT
+                LEARN2EARN
               </span>
             </div>
 
             {/* Title: Bebas Neue with Accent Series */}
-            <h1 className="font-bebas text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-text-primary leading-[0.92] uppercase mb-3 sm:mb-4">
+            <h1 className="font-bebas text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-text-primary leading-[0.92] uppercase mb-2.5 sm:mb-4">
               FELLOWSHIP <span className="text-accent">SERIES.</span>
             </h1>
 
-            {/* Short, Punchy Subtitle */}
-            <p className="font-sans text-xs sm:text-base text-text-secondary font-light max-w-lg leading-relaxed mb-5 sm:mb-6">
+            {/* Short, Punchy Subtitle — Constrained width */}
+            <p className="font-sans text-xs sm:text-base text-text-secondary font-light max-w-[280px] sm:max-w-lg leading-relaxed mb-4 sm:mb-6">
               A documented Python series built during the Learn2Earn AI Engineering Fellowship — real bugs, system architecture, and what each build taught me.
             </p>
 
-            {/* Metrics Bar & GitHub CTA */}
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-3.5 sm:pt-4 border-t border-border/50">
-              <div className="bg-surface/80 border border-border/80 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg flex items-center gap-1.5 sm:gap-2">
+            {/* Metrics Bar & GitHub CTA — Compact corner arrangement */}
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-border/50 max-w-[310px] sm:max-w-none">
+              <div className="bg-surface/80 border border-border/80 px-2 py-0.5 sm:px-3 sm:py-1.5 rounded-lg flex items-center gap-1 sm:gap-2">
                 <span className="font-bebas text-base sm:text-lg text-accent leading-none">04</span>
                 <span className="font-mono text-[9px] sm:text-[10px] text-text-secondary uppercase tracking-wider">
-                  Shipped Builds
+                  Builds
                 </span>
               </div>
-              <div className="bg-surface/80 border border-border/80 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg flex items-center gap-1.5 sm:gap-2">
+              <div className="bg-surface/80 border border-border/80 px-2 py-0.5 sm:px-3 sm:py-1.5 rounded-lg flex items-center gap-1 sm:gap-2">
                 <span className="font-bebas text-base sm:text-lg text-text-primary leading-none">01</span>
                 <span className="font-mono text-[9px] sm:text-[10px] text-text-secondary uppercase tracking-wider">
-                  Monorepo
+                  Repo
                 </span>
               </div>
-              <div className="bg-surface/80 border border-border/80 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg flex items-center gap-1.5 sm:gap-2">
+              <div className="bg-surface/80 border border-border/80 px-2 py-0.5 sm:px-3 sm:py-1.5 rounded-lg flex items-center gap-1 sm:gap-2">
                 <span className="font-bebas text-base sm:text-lg text-text-primary leading-none">100%</span>
                 <span className="font-mono text-[9px] sm:text-[10px] text-text-secondary uppercase tracking-wider">
-                  Post-Mortem Logged
+                  Logged
                 </span>
               </div>
 
@@ -107,7 +108,7 @@ export function FellowshipView() {
                 className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-4 sm:py-2 rounded-full bg-surface-hover/80 hover:bg-accent/15 border border-border hover:border-accent/40 text-text-primary hover:text-accent font-mono text-[10px] sm:text-xs uppercase tracking-widest transition-all duration-300 ml-0 sm:ml-auto"
               >
                 <span>&lt;/&gt;</span>
-                <span>maadan-dev / python-project-series</span>
+                <span>python-project-series</span>
                 <span>↗</span>
               </a>
             </div>
