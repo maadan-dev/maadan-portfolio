@@ -11,8 +11,8 @@ interface StatusTickerProps {
 const ITEMS = [
   'OPEN FOR FREELANCE',
   'BASED IN LAGOS',
-  'SOFTWARE DEVELOPER',
-  'REACT · TYPESCRIPT · GO',
+  'REACT · GO · PYTHON',
+  'LATEST: INVOICE API (05)',
 ];
 
 export default function StatusTicker({ visible }: StatusTickerProps) {

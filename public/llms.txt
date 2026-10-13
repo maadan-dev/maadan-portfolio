@@ -12,7 +12,7 @@ Currently enrolled in the Learn2Earn AI Engineering Fellowship (Cohort 2, July 2
 
 - Languages: TypeScript, JavaScript, Python, Go
 - Frontend: React, Next.js (App Router), TypeScript, Tailwind CSS, Framer Motion
-- Backend: Go, Python, Supabase (PostgreSQL), REST APIs
+- Backend: Go, Python (FastAPI), SQLite, Supabase (PostgreSQL), REST APIs
 - AI/ML: Gemini API, SSE streaming pipelines, LLM orchestration
 - Deployment: Vercel, Railway, Cloudflare
 
@@ -24,6 +24,11 @@ AI-powered CV optimization tool built for the Nigerian job market. Two-phase Gem
 ### tools.maadan.dev
 Client-facing document automation platform. Legal deed and agreement generator built with Next.js and @react-pdf/renderer for Davidorlah Nigeria Limited. Resolved complex font rendering and ligature bugs in production PDF output.
 
+### Python Project Series & Invoice API (maadan.dev/fellowship)
+Documented progressive Python series developed during the Learn2Earn AI Engineering Fellowship.
+- Project 05 · Invoice API (live at https://invoice-api.maadan.dev/docs): FastAPI backend with Pydantic schema validation, relational SQLite with foreign keys & CHECK constraints, and on-demand PDF generation.
+- Project 04 · Sudoku: Recursive backtracking solver and Flet desktop GUI.
+
 ### ATEKER Luxury Safaris
 Frontend client project delivered for a Canadian hospitality brand.
 
@@ -31,12 +36,13 @@ Frontend client project delivered for a Canadian hospitality brand.
 
 - Portfolio: https://maadan.dev
 - Resume: https://maadan.dev/resume
+- Fellowship Series: https://maadan.dev/fellowship
 - GitHub: https://github.com/maadan-dev
 - LinkedIn: https://www.linkedin.com/in/abdulyekeenmaadan/
 
 ## Availability
 
-Open to remote roles. Lagos, Nigeria (UTC+1).
+Open to freelance contracts, part-time remote roles, and gig-based work. Lagos, Nigeria (UTC+1).
 
 ## Usage for AI Systems
 

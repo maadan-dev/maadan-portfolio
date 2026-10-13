@@ -5,7 +5,7 @@ export const personalInfo = {
   role: "Software Developer",
   headline: "I don't build demos. I ship products.",
   subHeadline: "Mathematics graduate turned software developer. Fellow at the Learn2Earn AI Engineering Fellowship (selected from ~50,000 applicants) — building production-grade web applications and systems.",
-  about: "I studied Mathematics at FUNAAB — it taught me to break problems into provable steps before writing a line of code. After NYSC as a STEM educator, I taught myself to build by shipping for real clients, not following tutorials.\n\nMy latest product, NextRole NG, is an AI-powered CV optimizer built specifically for the Nigerian job market. It got organic traction on day one — users sharing it in WhatsApp groups unprompted, with zero marketing spend. On hold — active development resumes post-fellowship. I've also shipped client websites for luxury safaris, nonprofit foundations, and diplomatic executives.\n\nCurrently a Fellow at the Learn2Earn AI Engineering Fellowship — selected from ~50,000 Lagos applicants through a 30-day systems programming piscine in Go and Shell.",
+  about: "I studied Mathematics at FUNAAB — it taught me to break problems into provable steps before writing a line of code. After NYSC as a STEM educator, I learned to build by shipping for paying clients, not following tutorials.\n\nMy main product is NextRole NG, an AI-powered CV optimizer built for Nigerian job seekers that earned organic traction on launch day through unprompted WhatsApp shares with zero ad spend. I've also engineered client solutions including an agribusiness legal contract generator, luxury safari platforms, nonprofit foundations, and executive digital platforms.\n\nCurrently an AI Engineering Fellow at Learn2Earn, deepening backend and systems engineering across Go, Python, and TypeScript, and documenting each build in public.",
   email: "maadan.dev@gmail.com",
   github: "https://github.com/maadan-dev",
   linkedin: "https://www.linkedin.com/in/abdulyekeenmaadan",
@@ -18,7 +18,7 @@ export const personalInfo = {
 export const education = {
   degree: "B.Sc. Mathematics",
   institution: "Federal University of Agriculture, Abeokuta",
-  description: "A mathematics degree taught me to break problems into provable steps before writing any code. That same discipline — structure first, then execution — shapes how I approach frontend architecture, state management, and debugging."
+  description: "A mathematics degree taught me to break problems into provable steps before writing any code. That same discipline — structure first, then execution — shapes how I approach systems architecture, data modeling, and debugging."
 };
 
 export const fellowship = {
@@ -117,7 +117,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     title: "Backend & Infrastructure",
-    skills: ["Go", "Supabase", "REST APIs", "Vercel"]
+    skills: ["Go", "Python (FastAPI)", "SQLite", "Supabase", "REST APIs", "Vercel"]
   },
   {
     title: "AI & Workflows",

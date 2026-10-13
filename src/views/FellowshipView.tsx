@@ -61,7 +61,7 @@ export function FellowshipView() {
             {/* Kicker */}
             <div className="flex items-center gap-2.5 sm:gap-3 mb-2 sm:mb-3 flex-wrap">
               <span className="font-mono text-[11px] sm:text-xs uppercase tracking-widest text-accent flex items-center gap-1.5">
-                <span>&gt;_</span> 03 // SYSTEMS &amp; AI
+                <span>&gt;_</span> SYSTEMS &amp; AI
               </span>
               <span className="h-px w-4 sm:w-6 bg-border/80 hidden sm:inline-block" />
               <span className="inline-flex items-center gap-1.5 font-mono text-[10px] sm:text-[11px] text-text-secondary/70 uppercase tracking-wider">
@@ -77,13 +77,15 @@ export function FellowshipView() {
 
             {/* Short, Punchy Subtitle — Constrained width */}
             <p className="font-sans text-xs sm:text-base text-text-secondary font-light max-w-[280px] sm:max-w-lg leading-relaxed mb-4 sm:mb-6">
-              A documented Python series built during the Learn2Earn AI Engineering Fellowship — real bugs, system architecture, and what each build taught me.
+              A documented Python series built during the Learn2Earn AI Engineering Fellowship — real bugs, design tradeoffs, and what each build taught me.
             </p>
 
             {/* Metrics Bar & GitHub CTA — Compact corner arrangement */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-border/50 max-w-[310px] sm:max-w-none">
               <div className="bg-surface/80 border border-border/80 px-2 py-0.5 sm:px-3 sm:py-1.5 rounded-lg flex items-center gap-1 sm:gap-2">
-                <span className="font-bebas text-base sm:text-lg text-accent leading-none">04</span>
+                <span className="font-bebas text-base sm:text-lg text-accent leading-none">
+                  {String(visibleProjects.length).padStart(2, "0")}
+                </span>
                 <span className="font-mono text-[9px] sm:text-[10px] text-text-secondary uppercase tracking-wider">
                   Builds
                 </span>
@@ -95,9 +97,11 @@ export function FellowshipView() {
                 </span>
               </div>
               <div className="bg-surface/80 border border-border/80 px-2 py-0.5 sm:px-3 sm:py-1.5 rounded-lg flex items-center gap-1 sm:gap-2">
-                <span className="font-bebas text-base sm:text-lg text-text-primary leading-none">100%</span>
+                <span className="font-bebas text-base sm:text-lg text-text-primary leading-none">
+                  {String(visibleProjects.filter((p) => Boolean(p.live)).length).padStart(2, "0")}
+                </span>
                 <span className="font-mono text-[9px] sm:text-[10px] text-text-secondary uppercase tracking-wider">
-                  Logged
+                  Live
                 </span>
               </div>
 
@@ -171,15 +175,28 @@ export function FellowshipView() {
                 </ul>
               </div>
 
-              {/* Read the Writeup Link */}
-              <a
-                href={projectUrl(project.slug)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-mono text-xs uppercase tracking-widest text-accent hover:text-white border-b border-accent/40 hover:border-white pb-0.5 transition-colors inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-xs"
-              >
-                Read the writeup ↗
-              </a>
+              {/* Action Links */}
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+                <a
+                  href={projectUrl(project.slug)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs uppercase tracking-widest text-accent hover:text-white border-b border-accent/40 hover:border-white pb-0.5 transition-colors inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-xs"
+                >
+                  Read the writeup ↗
+                </a>
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-xs uppercase tracking-widest text-emerald-400 hover:text-white border-b border-emerald-400/40 hover:border-white pb-0.5 transition-colors inline-flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-xs"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    Try the live API ↗
+                  </a>
+                )}
+              </div>
             </li>
           ))}
         </ol>

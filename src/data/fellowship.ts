@@ -5,6 +5,7 @@ export type Project = {
   type: string;
   concept: string; // what this project taught me
   broke: string[]; // what actually broke, one line each
+  live?: string; // deployed URL, rendered as Try it live
   draft: boolean; // draft projects are not rendered
 };
 
@@ -16,9 +17,9 @@ export const fellowshipIntro =
   "A Python project series, one repo, built during the Learn2Earn AI Engineering Fellowship. Each project links to its README for the full writeup.";
 
 export const recurringTheme =
-  "Across the first four projects the bugs weren't syntax. They came down to three questions: who owns the state, what type a value actually is, and when something runs. Going forward: type hints on function signatures, checked with pyright, starting in project 5.";
+  "Across the first four projects the bugs came down to state ownership, actual types, and execution order. In Project 5, type hints with Pydantic and Pyright caught boundary mismatches before runtime — shifting effort from debugging typos to schema design.";
 
-export const nowBuilding = "Project 5: Invoice API (planned)";
+export const nowBuilding = "Project 6 (Planning)";
 
 export const projects: Project[] = [
   {
@@ -75,6 +76,21 @@ export const projects: Project[] = [
       "Cell removal could loop forever when no more cells could be removed safely.",
       "is_board_solved reported false conflicts by comparing each cell against itself.",
     ],
+    draft: false,
+  },
+  {
+    number: "05",
+    slug: "05-invoice-api",
+    title: "Invoice API",
+    type: "REST API (FastAPI)",
+    concept:
+      "Route handlers, Pydantic schema validation, relational SQLite with foreign keys & CHECK constraints, on-demand PDF generation, and live cloud deployment",
+    broke: [
+      "SQLite ignored foreign keys until explicitly activating 'PRAGMA foreign_keys = ON'.",
+      "Pydantic validation raised raw 422 errors until structured schemas matched incoming line items.",
+      "In-memory PDF generation required explicit buffer rewinds before returning as a streaming response.",
+    ],
+    live: "https://invoice-api.maadan.dev/docs",
     draft: false,
   },
 ];

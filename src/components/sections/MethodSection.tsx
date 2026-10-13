@@ -42,7 +42,7 @@ export function MethodSection() {
             </motion.div>
 
             <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }} style={{ fontFamily: "'Barlow',sans-serif", fontWeight: 300, fontSize: 11, letterSpacing: '0.12em', color: 'rgba(250,250,250,0.5)' }}>
-              React · TypeScript · Go · AI-Augmented
+              React · TypeScript · Go · Python
             </motion.span>
           </div>
 

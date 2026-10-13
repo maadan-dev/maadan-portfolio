@@ -56,7 +56,7 @@ export function MetricsBar() {
             maxWidth: 800,
           }}
         >
-          Selected from <span style={{ color: ACCENT, fontWeight: 600 }}>~50,000 applicants</span> for the rigorous 2-year Learn2Earn AI Engineering Fellowship — training in systems engineering while active for part-time remote roles and select contracts.
+          Selected from <span style={{ color: ACCENT, fontWeight: 600 }}>~50,000 applicants</span> for the Learn2Earn AI Engineering Fellowship — building production systems while available for select contracts and part-time remote work.
         </motion.p>
       </div>
 

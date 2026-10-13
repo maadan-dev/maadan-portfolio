@@ -3,7 +3,7 @@ import { FellowshipView } from "@/views/FellowshipView";
 import { fellowshipIntro, projects, recurringTheme } from "@/data/fellowship";
 
 export const metadata: Metadata = {
-  title: "Fellowship | Yekeen Maadan",
+  title: "Fellowship",
   description:
     "A Python project series built during the Learn2Earn AI Engineering Fellowship — one repo, real bugs, and what each project taught me.",
   alternates: {

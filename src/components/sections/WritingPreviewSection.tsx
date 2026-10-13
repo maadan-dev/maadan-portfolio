@@ -30,7 +30,7 @@ export function WritingPreviewSection() {
                 textTransform: 'uppercase',
                 color: `rgba(${AR}, 0.55)`
               }}>
-                04 / Thought Leadership
+                04 / Writing
               </span>
               <div style={{ width: 24, height: 1, background: ACCENT, opacity: 0.4 }} />
             </motion.div>
@@ -66,7 +66,7 @@ export function WritingPreviewSection() {
                 maxWidth: 480
               }}
             >
-              Technical writing is the highest-trust signal for async remote work. It proves how I isolate problems, reason through complex systems, and communicate clearly.
+              Write-ups on bugs I've chased, production systems I've built, and how I break down engineering problems.
             </motion.p>
           </div>
         </div>

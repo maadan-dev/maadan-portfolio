@@ -3,8 +3,8 @@ import { ResumeClient } from './ResumeClient';
 import { personalInfo, projects, skillCategories, education, fellowship } from '../../data/content';
 
 export const metadata: Metadata = {
-  title: 'Yekeen Maadan · Frontend & Go Developer — Resume',
-  description: 'Mathematics graduate turned software developer. Fellow at the Learn2Earn AI Engineering Fellowship. Ships Next.js, React, TypeScript, and Go applications.',
+  title: 'Resume · Software Developer',
+  description: 'Mathematics graduate turned software developer. Fellow at the Learn2Earn AI Engineering Fellowship. Ships Next.js, React, TypeScript, Go, and Python applications.',
   alternates: {
     canonical: 'https://www.maadan.dev/resume',
   },

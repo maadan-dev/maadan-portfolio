@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { education, fellowship } from '../../data/content';
 
@@ -76,6 +77,25 @@ export function EducationSection() {
             <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }} style={{ padding: '12px 16px', borderRadius: 6, background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)' }}>
               <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 500, fontSize: 10, letterSpacing: '0.18em', textTransform: 'uppercase', color: `rgba(${AR},0.45)`, display: 'block', marginBottom: 4 }}>Selection</span>
               <span style={{ fontSize: 13, color: 'rgba(250,250,250,0.55)', lineHeight: 1.6 }}>{fellowship.selection}</span>
+            </motion.div>
+
+            {/* Fellowship project series bridge */}
+            <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.35 }}>
+              <Link
+                href="/fellowship"
+                data-hover
+                className="flex items-center justify-between p-3.5 rounded-md border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/10 hover:border-blue-500/40 transition-all text-decoration-none group"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="font-mono text-xs text-zinc-300">
+                    Latest build: <span className="text-white font-medium">05 · Invoice API</span> (FastAPI + SQLite)
+                  </span>
+                </div>
+                <span className="font-mono text-xs text-[#60a5fa] group-hover:translate-x-1 transition-transform">
+                  Explore Series ↗
+                </span>
+              </Link>
             </motion.div>
           </div>
         </div>

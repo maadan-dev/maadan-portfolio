@@ -25,11 +25,15 @@ To get into the fellowship, he had to survive a 30-day systems programming pisci
 That's the context behind his Go experience. Not a tutorial. Not a side project. Pressure.
 
 ## HIS STACK
-JavaScript, TypeScript, React, Next.js, Tailwind CSS, Framer Motion on the frontend. Go on the backend (learned during the piscine, used for NextRole NG). Supabase for data. Gemini API for AI features.
+JavaScript, TypeScript, React, Next.js, Tailwind CSS, Framer Motion on the frontend. Go and Python (FastAPI, SQLite) on the backend (Go learned during the piscine and used for NextRole NG; Python practiced through a progressive fellowship series). Supabase for data. Gemini API for AI features.
 
 ## HIS WORK
 
 NextRole NG — AI CV optimizer for the Nigerian job market. Built with Go + React + Gemini API. Got organic traction on launch day. Currently paused.
+
+Document Automation (tools.maadan.dev) — Client-side legal document generator built for a Lagos agribusiness (Davidorlah Nigeria Limited). Generated print-ready deeds in under 2 seconds with zero backend data storage.
+
+Learn2Earn Python Project Series — Progressive backend engineering series documented in public at maadan.dev/fellowship. His latest completed build is Project 05: Invoice API (live at invoice-api.maadan.dev/docs), featuring FastAPI, Pydantic validation, relational SQLite, and on-demand PDF generation.
 
 Executive Persona Platform (segunalabi.me) — Clean design system built for the MD of Davidorlah Nigeria Limited, a diplomat and UN Peace Ambassador. Repeat client — contracted again for updates.
 
